@@ -1,51 +1,82 @@
-// 回到顶部
-function onScrollBackTop() {
-  const backTopEle = document.getElementById('sea-back-to-top');
-  backTopEle.style.display = 'none';
-  if (!backTopEle) return;
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop > 50) {
-      backTopEle.style.display = 'flex';
+/* global KEEP */
+
+window.addEventListener('DOMContentLoaded', () => {
+  const { version, local_search, lazyload } = KEEP.theme_config
+
+  KEEP.themeInfo = {
+    theme: `Keep v${version}`,
+    author: 'XPoet',
+    repository: 'https://github.com/XPoet/hexo-theme-keep',
+    localStorageKey: 'KEEP-THEME-STATUS',
+    encryptKey: 'KEEP-ENCRYPT',
+    styleStatus: {
+      isDark: false,
+      fontSizeLevel: 0,
+      isShowToc: true
+    },
+    defaultDatetimeFormat: 'YYYY-MM-DD HH:mm:ss'
+  }
+
+  // print theme base info
+  KEEP.printThemeInfo = () => {
+    console.log(
+      `\n %c ${KEEP.themeInfo.theme} %c ${KEEP.themeInfo.repository} \n`,
+      `color: #fadfa3; background: #333; padding: 6px 0;`,
+      `padding: 6px 0;`
+    )
+  }
+  KEEP.printThemeInfo()
+
+  // set version number of footer
+  KEEP.setFooterVersion = () => {
+    const vd = document.querySelector('.footer .keep-version')
+    vd && (vd.innerHTML = KEEP.themeInfo.theme)
+  }
+
+  // set styleStatus to localStorage
+  KEEP.setStyleStatus = () => {
+    localStorage.setItem(KEEP.themeInfo.localStorageKey, JSON.stringify(KEEP.themeInfo.styleStatus))
+  }
+
+  // get styleStatus from localStorage
+  KEEP.getStyleStatus = () => {
+    let temp = localStorage.getItem(KEEP.themeInfo.localStorageKey)
+    if (temp) {
+      temp = JSON.parse(temp)
+      for (let key in KEEP.themeInfo.styleStatus) {
+        KEEP.themeInfo.styleStatus[key] = temp[key]
+      }
+      return temp
     } else {
-      backTopEle.style.display = 'none';
+      return null
     }
-  });
-}
+  }
 
-// 搜索
-function onDocSearch() {
-  const searchIconEle = document.getElementById('sea-search-icon');
-  const searchInputEle = document.getElementById('sea-search-input');
-  if (!searchIconEle) return;
-  searchIconEle.addEventListener('click', () => {
-    const btnEle = searchInputEle.querySelector('.DocSearch');
-    btnEle.click();
-  });
-}
+  // init prototype function
+  KEEP.initPrototype = () => {
+    HTMLElement.prototype.wrap = function (wrapper) {
+      this.parentNode.insertBefore(wrapper, this)
+      this.parentNode.removeChild(this)
+      wrapper.appendChild(this)
+    }
+  }
+  KEEP.initPrototype()
 
-// 移动端菜单
-function onMobileNavShow() {
-  const body = document.body;
-  const navToggle = document.getElementById('sea-mobile-nav-toggle');
-  const dimmer = document.getElementById('sea-mobile-nav-dimmer');
-  const CLASS_NAME = 'sea-mobile-nav-on';
-  if (!navToggle) return;
+  KEEP.initExecute = () => {
+    KEEP.initUtils()
+    KEEP.initHeaderShrink()
+    KEEP.initModeToggle()
+    KEEP.initBack2Top()
+    KEEP.initCodeBlock()
+    KEEP.setFooterVersion()
 
-  navToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    body.classList.toggle(CLASS_NAME);
-  });
+    if (lazyload?.enable === true) {
+      KEEP.initLazyLoad()
+    }
 
-  dimmer.addEventListener('click', function (e) {
-    if (!body.classList.contains(CLASS_NAME)) return;
-
-    e.preventDefault();
-    body.classList.remove(CLASS_NAME);
-  });
-}
-
-onScrollBackTop();
-onDocSearch();
-onMobileNavShow();
+    if (local_search?.enable === true) {
+      KEEP.initLocalSearch()
+    }
+  }
+  KEEP.initExecute()
+})

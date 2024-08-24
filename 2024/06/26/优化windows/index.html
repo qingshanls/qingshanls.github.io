@@ -1,104 +1,282 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>优化windows | QSLS</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="QSLS">
+    
+    <title>
+        
+            优化windows |
+        
+        QSLSの站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  <link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css">
+    
+        <link rel="shortcut icon" href="/images/logo.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-  
-  
-<link rel="stylesheet" href="/fonts/sea-font.css">
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
 
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
 
-  
-  
-<link rel="stylesheet" href="/css/main.css">
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
 
-
-  
-  <meta name="description" content="Windows10&#x2F;11系统优化 1.去除搜索页面信息流和热搜 去除信息流： Windows10:任务栏右键-&gt;搜索-&gt;搜索突出显示 [关闭] Windows11:设置-&gt;隐私和安全-&gt;更多设置-&gt;显示搜索要点 [关闭] 去除热搜：导入以下内容到注册表 12345Windows Registry Editor Version 5.00[HKEY_CURRENT_USE">
-<meta property="og:type" content="article">
-<meta property="og:title" content="优化windows">
-<meta property="og:url" content="https://github.com/qingshanls.github.io/2024/06/26/%E4%BC%98%E5%8C%96windows/index.html">
-<meta property="og:site_name" content="QSLS">
-<meta property="og:description" content="Windows10&#x2F;11系统优化 1.去除搜索页面信息流和热搜 去除信息流： Windows10:任务栏右键-&gt;搜索-&gt;搜索突出显示 [关闭] Windows11:设置-&gt;隐私和安全-&gt;更多设置-&gt;显示搜索要点 [关闭] 去除热搜：导入以下内容到注册表 12345Windows Registry Editor Version 5.00[HKEY_CURRENT_USE">
-<meta property="og:locale">
-<meta property="article:published_time" content="2024-06-26T06:51:37.000Z">
-<meta property="article:modified_time" content="2024-06-29T15:47:42.777Z">
-<meta property="article:author" content="QSLS">
-<meta property="article:tag" content="windows">
-<meta name="twitter:card" content="summary">
-
-  <style>
-    :root {
-      --sea-color-primary: #66ccff;
-    }
-  </style>
-
-  
-<script src="/js/global.js"></script>
-
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"github.com","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#66ccff","title":"QSLSの站","author":"QSLS","avatar":"/images/qqw.jpg","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"主页":"/                        || fa-solid fa-home","归档":"/archives                || fa-solid fa-box-archive","关于":"/about                || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.jpg","background_img_dark":null,"description":"我们所经历的每个平凡的日常，也许就是连续发生的奇迹。","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"create","post_datetime_format":"YYYY年MM月DD日 HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["QvQ"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":null,"word_count":true,"site_deploy":{"enable":true,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.2"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
 <meta name="generator" content="Hexo 7.2.0"></head>
+
+
 <body>
-  <header class="sea-header">
-    <nav class="sea-nav-wrap">
-  <h1 class="sea-nav-logo" title="">
-    <a href="/">QSLS</a>
-  </h1>
-  <div class="sea-nav-menus">
-    <div class="sea-menu-pc-wrap">
-  
-    <a
-      class="sea-menu-link"
-      
-      href="/archives/"
-    >
-      归档
-    </a>
-  
-    <a
-      class="sea-menu-link"
-      
-      href="/about/"
-    >
-      关于
-    </a>
-  
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
 </div>
 
-    <div id="sea-mobile-nav-toggle">
-      <i class="sea-font">bars</i>
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               QSLSの站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                主页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                关于
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
-  </header>
-  <main id="sea-main-wrapper">
-    <article class="sea-page-card-wrapper">
-  <header class="sea-article-header">
-    <h1 class="sea-article-title">优化windows</h1>
-    
-      <div class="sea-post-meta sea-post-meta__center">
-        <div class="sea-post-time">
-  <i class="sea-font">date</i>
-  <time datetime="2024-06-26T06:51:37.000Z">2024-06-26</time>
-</div>
-        
-        
-  <div class="sea-post-tags">
-    <i class="sea-font">tag</i>
-    <a class="tag-link" href="/tags/windows/" rel="tag">windows</a>
-  </div>
 
-      </div>
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            主页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            关于
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        优化windows
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/qqw.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">QSLS</span>
+                                
+                                    <span class="author-badge">QvQ</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-26 14:51:37</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sat Jun 29 2024 23:47:42 GMT+0800">2024-06-29 23:47:42</span>
+            </span>
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/windows/">windows</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
     
-  </header>
-  <div class="sea-article-content sea-doc">
-    <h2 id="Windows10-11系统优化">Windows10/11系统优化</h2>
-<h4 id="1-去除搜索页面信息流和热搜">1.去除搜索页面信息流和热搜</h4>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h2 id="windows1011系统优化"><a class="markdownIt-Anchor" href="#windows1011系统优化"></a> Windows10/11系统优化</h2>
+<h4 id="1去除搜索页面信息流和热搜"><a class="markdownIt-Anchor" href="#1去除搜索页面信息流和热搜"></a> 1.去除搜索页面信息流和热搜</h4>
 <p>去除信息流：</p>
 <p>Windows10:任务栏右键-&gt;搜索-&gt;搜索突出显示 [关闭]</p>
 <p>Windows11:设置-&gt;隐私和安全-&gt;更多设置-&gt;显示搜索要点 [关闭]</p>
@@ -107,136 +285,348 @@
 <blockquote>
 <p>reg add “HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer” /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f</p>
 </blockquote>
-<h4 id="2-永久关闭系统更新">2.永久关闭系统更新</h4>
+<h4 id="2永久关闭系统更新"><a class="markdownIt-Anchor" href="#2永久关闭系统更新"></a> 2.永久关闭系统更新</h4>
 <p>关闭更新：导入以下内容到注册表后找到 “设置-&gt;Windows更新” 将暂停更新的天数调到最高</p>
 <p>恢复更新：找到 “设置-&gt;Windows更新” 点击 “继续更新”</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]</span><br><span class="line">&quot;FlightSettingsMaxPauseDays&quot;=dword:00000365</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>reg add “HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings” /v FlightSettingsMaxPauseDays /t reg_dword /d 3000 /f</p>
 </blockquote>
-<h4 id="3-Windows激活">3.Windows激活</h4>
-<p>win+r 运行<br>
-输入powershell,回车<br>
+<h4 id="3windows激活"><a class="markdownIt-Anchor" href="#3windows激活"></a> 3.Windows激活</h4>
+<p>win+r 运行<br />
+输入powershell,回车<br />
 输入下方代码 ，按回车</p>
 <blockquote>
-<p>irm <a target="_blank" rel="noopener" href="https://massgrave.dev/get">https://massgrave.dev/get</a> |iex</p>
+<p>irm <a class="link"   target="_blank" rel="noopener" href="https://massgrave.dev/get" >https://massgrave.dev/get<i class="fas fa-external-link-alt"></i></a> |iex</p>
 </blockquote>
-<p>输入1，回车<br>
-出现以下三种情况就属于失败，需要采用手动下载的方式：<br>
-1、出现“Activation Failed Error Code: 0xC004C003” 字样<br>
-2、出现“无法解析”字样<br>
-3、执行命令行卡了很久没反应：<br>
+<p>输入1，回车<br />
+出现以下三种情况就属于失败，需要采用手动下载的方式：<br />
+1、出现“Activation Failed Error Code: 0xC004C003” 字样<br />
+2、出现“无法解析”字样<br />
+3、执行命令行卡了很久没反应：<br />
 直接下载这个链接的压缩包:</p>
 <blockquote>
 <p><a href="https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip">https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip</a></p>
 </blockquote>
-<p>1、右键单击下载的 zip 文件并解压<br>
-2、在解压后的文件夹中，找到名为的文件夹  <code>All-In-One-Version</code><br>
-3、以管理员身份运行，运行文件名为 <code>MAS_AIO.cmd</code><br>
+<p>1、右键单击下载的 zip 文件并解压<br />
+2、在解压后的文件夹中，找到名为的文件夹  <code>All-In-One-Version</code><br />
+3、以管理员身份运行，运行文件名为 <code>MAS_AIO.cmd</code><br />
 4、您将看到激活选项，然后按照屏幕上的说明进行操作</p>
 
-  </div>
+                    
+                </div>
 
-  
-    
-  <div class="sea-prev-next-wrapper">
-    
-      <div class="prev">
-        <span>←</span>
-        <a class="link" href="/2024/06/26/Onemanager/">
-          Onemanager使用
-        </a>
-      </div>
-    
-    
-      <div class="next">
-        <a class="link" href="/2024/06/26/markdown%E5%AD%A6%E4%B9%A0/">
-          markdown学习
-        </a>
-        <span>→</span>
-      </div>
-    
-  </div>
+                
 
-  
-</article>
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/windows/">windows</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/06/26/Onemanager/"
+                                   title="Onemanager使用"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Onemanager使用</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/26/markdown%E5%AD%A6%E4%B9%A0/"
+                                   title="markdown学习"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">markdown学习</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
 
 
-  </main>
-  <footer id="sea-footer-container">
-  <div class="sea-footer-row">
-    <div class="sea-footer-menu-link">
-      
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows1011%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text"> Windows10&#x2F;11系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E5%8E%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF%E6%B5%81%E5%92%8C%E7%83%AD%E6%90%9C"><span class="nav-text"> 1.去除搜索页面信息流和热搜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text"> 2.永久关闭系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3windows%E6%BF%80%E6%B4%BB"><span class="nav-text"> 3.Windows激活</span></a></li></ol></li></ol></li></ol>
     </div>
-  </div>
-  
-  
-  <div class="sea-footer-row">
-    <div class="sea-footer-copyright">
-      <span>©</span>
-      
-        2024
-      
-      <span>·</span>
-      QSLS
+</div>
+
+            </div>
+        
     </div>
-    <span class="split-line">|</span>
-    <div class="sea-footer-theme-by">
-      Theme by <a class="theme" href="https://github.com/hai-zou/hexo-theme-sea" target="_blank">Sea</a>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">QSLS</a>
+        
     </div>
-  </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+        </div>
+    
+
+    
+        <div class="count-info info-item">
+            
+                <span class="count-item border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">2.4k</span>
+                </span>
+            
+
+            
+
+            
+        </div>
+    
+
+    
 </footer>
-  <div class="sea-menu-mobile-wrap">
-  <div class="sea-menu-mobile-inner">
+
+        </div>
+    </div>
+
+    <!-- post tools -->
     
-      <a
-        class="sea-menu-link"
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
         
-        href="/archives/"
-      >
-        归档
-      </a>
-    
-      <a
-        class="sea-menu-link"
+
+        <!-- PC TOC show toggle -->
         
-        href="/about/"
-      >
-        关于
-      </a>
-    
-  </div>
-</div>
-<div id="sea-mobile-nav-dimmer"></div>
-  <div class="sea-float-tools-wrapper">
-  
-  <a class="sea-float-tools-btn" id="sea-back-to-top" href="#">
-    <i class="sea-font">arrow_up</i>
-  </a>
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
 
-  
-  
+        <!-- PC go comment -->
+        
 
-  
-  <div class="sea-float-tools-btn" id="sea-theme-mode">
-    <i class="sea-font">theme</i>
-
-    <ul class="sea-theme-select-box">
-      <li class="sea-theme-select-item" id="sea-theme-auto">跟随系统</li>
-      <li class="sea-theme-select-item" id="sea-theme-light">浅色模式</li>
-      <li class="sea-theme-select-item" id="sea-theme-dark">深色模式</li>
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
     </ul>
-  </div>
 </div>
 
-  
-<script src="/js/theme.js"></script>
+        </div>
+    
 
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows1011%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text"> Windows10&#x2F;11系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E5%8E%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF%E6%B5%81%E5%92%8C%E7%83%AD%E6%90%9C"><span class="nav-text"> 1.去除搜索页面信息流和热搜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text"> 2.永久关闭系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3windows%E6%BF%80%E6%B4%BB"><span class="nav-text"> 3.Windows激活</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
 
 <script src="/js/main.js"></script>
 
+<script src="/js/libs/anime.min.js"></script>
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
 </body>
 </html>

@@ -1,297 +1,835 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>QSLS</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="QSLS">
+    
+    <title>
+        
+        QSLSの站
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  <link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css">
+    
+        <link rel="shortcut icon" href="/images/logo.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-  
-  
-<link rel="stylesheet" href="/fonts/sea-font.css">
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"github.com","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#66ccff","title":"QSLSの站","author":"QSLS","avatar":"/images/qqw.jpg","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"主页":"/                        || fa-solid fa-home","归档":"/archives                || fa-solid fa-box-archive","关于":"/about                || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/bg.jpg","background_img_dark":null,"description":"我们所经历的每个平凡的日常，也许就是连续发生的奇迹。","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"create","post_datetime_format":"YYYY年MM月DD日 HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["QvQ"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":null,"word_count":true,"site_deploy":{"enable":true,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.2"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
-  
-  
-<link rel="stylesheet" href="/css/main.css">
-
-
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="QSLS">
-<meta property="og:url" content="https://github.com/qingshanls.github.io/index.html">
-<meta property="og:site_name" content="QSLS">
-<meta property="og:locale">
-<meta property="article:author" content="QSLS">
-<meta name="twitter:card" content="summary">
-
-  <style>
-    :root {
-      --sea-color-primary: #66ccff;
-    }
-  </style>
-
-  
-<script src="/js/global.js"></script>
-
-<meta name="generator" content="Hexo 7.2.0"></head>
 <body>
-  <header class="sea-header">
-    <nav class="sea-nav-wrap">
-  <h1 class="sea-nav-logo" title="">
-    <a href="/">QSLS</a>
-  </h1>
-  <div class="sea-nav-menus">
-    <div class="sea-menu-pc-wrap">
-  
-    <a
-      class="sea-menu-link"
-      
-      href="/archives/"
-    >
-      归档
-    </a>
-  
-    <a
-      class="sea-menu-link"
-      
-      href="/about/"
-    >
-      关于
-    </a>
-  
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
 </div>
 
-    <div id="sea-mobile-nav-toggle">
-      <i class="sea-font">bars</i>
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+        
+<div class="first-screen-container border-box flex-center fade-in-down-animation">
+    <div class="first-screen-content border-box">
+        <div class="top-placeholder border-box"></div>
+
+        <div class="middle-placeholder border-box">
+            
+                <div class="description border-box">
+                    
+                        
+                            
+                                <div class="desc-item border-box"><span class="desc">我们所经历的每个平凡的日常，也许就是连续发生的奇迹。</span><span class="cursor">｜</span></div>
+                            
+                        
+                    
+                </div>
+            
+
+            
+        </div>
+
+        <div class="bottom-placeholder border-box">
+            
+        </div>
     </div>
-  </div>
-</nav>
-  </header>
-  <main id="sea-main-wrapper">
-    <section class="sea-post-list">
-  
-    <div class="sea-post-item" style="animation-delay: 0.0s;">
-      <h2 class="sea-post-title">
-        <a class="sea-post-link" href="/2024/06/29/Anime%E7%BD%91%E7%AB%99/">
-          Anime网站
-        </a>
-      </h2>
-      <div class="sea-post-line"></div>
-      <div class="sea-post-abstract">
-        
-        
-
-凉！
-
-一些收集的Anime网站
-更新时间：24-08-19-21-42
-
-
-YuC’s AnimeList
-
-      </div>
-      <div class="sea-post-meta">
-        <div class="sea-post-time">
-  <i class="sea-font">date</i>
-  <time datetime="2024-06-29T14:38:49.000Z">2024-06-29</time>
 </div>
-        
-        
-  <div class="sea-post-tags">
-    <i class="sea-font">tag</i>
-    <a class="tag-link" href="/tags/Anime/" rel="tag">Anime</a>
-  </div>
 
-      </div>
-      
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box is-home">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper transparent-1">
+
+    <div class="border-box header-content has-first-screen">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               QSLSの站
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box active">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                主页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                关于
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  
-    <div class="sea-post-item" style="animation-delay: 0.1s;">
-      <h2 class="sea-post-title">
-        <a class="sea-post-link" href="/2024/06/26/Onemanager/">
-          Onemanager使用
-        </a>
-      </h2>
-      <div class="sea-post-line"></div>
-      <div class="sea-post-abstract">
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu active">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            主页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            关于
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    <div class="home-content-container fade-in-down-animation">
+    
+    <ul class="home-post-list border-box">
         
-        onemanager使用
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                        <div class="post-sticky-box card">
+                            <i class="fas fa-thumbtack"></i><span class="sticky-name">&nbsp;置顶</span>
+                        </div>
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/06/29/Anime%E7%BD%91%E7%AB%99/">
+                            Anime网站
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            一些acg网站
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Sat Aug 24 2024 17:17:15 GMT+0800"
+                >2024年08月24日 17:17:15</span>
+            </span>
+        
+
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Anime/">Anime</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/06/29/Anime%E7%BD%91%E7%AB%99/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/08/24/TEST/">
+                            MATH TEST
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            测试MATHJAX使用情况
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Sat Aug 24 2024 17:16:23 GMT+0800"
+                >2024年08月24日 17:16:23</span>
+            </span>
+        
+
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/study/">study</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/08/24/TEST/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/06/26/Onemanager/">
+                            Onemanager使用
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                             onemanager使用
 利用onemanager托管到Glitch（免费）可实现挂载多个网盘，通过网站直接去访问网盘的文件,可以实现直链下载，网页在线观看视频等功能。
-目前支持的网盘有：onedrive/onedriveCN、阿里云盘、谷歌云等。
-项目地址：https://github.com/qkqpttgf/OneManager-php
+目前支持的网盘有：onedrive/onedriveCN、阿里云盘、谷歌云等。...
+                        
+                    </div>
 
-      </div>
-      <div class="sea-post-meta">
-        <div class="sea-post-time">
-  <i class="sea-font">date</i>
-  <time datetime="2024-06-26T09:23:30.000Z">2024-06-26</time>
-</div>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Sat Jun 29 2024 23:47:47 GMT+0800"
+                >2024年06月29日 23:47:47</span>
+            </span>
+        
+
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/study/">study</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
         
         
-  <div class="sea-post-tags">
-    <i class="sea-font">tag</i>
-    <a class="tag-link" href="/tags/study/" rel="tag">study</a>
-  </div>
-
-      </div>
-      
+        
+        
     </div>
-  
-    <div class="sea-post-item" style="animation-delay: 0.2s;">
-      <h2 class="sea-post-title">
-        <a class="sea-post-link" href="/2024/06/26/%E4%BC%98%E5%8C%96windows/">
-          优化windows
-        </a>
-      </h2>
-      <div class="sea-post-line"></div>
-      <div class="sea-post-abstract">
+
+    
+        <a class="home-read-more" href="/2024/06/26/Onemanager/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
         
-        Windows10/11系统优化
-1.去除搜索页面信息流和热搜
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/06/26/%E4%BC%98%E5%8C%96windows/">
+                            优化windows
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                             Windows10/11系统优化
+ 1.去除搜索页面信息流和热搜
 去除信息流：
 Windows10:任务栏右键-&gt;搜索-&gt;搜索突出显示 [关闭]
-Windows11:设置-&gt;隐私和安全-&gt;更多设置-&gt;显示搜索要点 [关闭]
-去除热搜：导入以下内容到注册表
+Windows11:设置-&gt;隐私和安全-&gt;更多设置-&gt;显示搜索要点 [关...
+                        
+                    </div>
 
-      </div>
-      <div class="sea-post-meta">
-        <div class="sea-post-time">
-  <i class="sea-font">date</i>
-  <time datetime="2024-06-26T06:51:37.000Z">2024-06-26</time>
-</div>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Sat Jun 29 2024 23:47:42 GMT+0800"
+                >2024年06月29日 23:47:42</span>
+            </span>
+        
+
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/windows/">windows</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
         
         
-  <div class="sea-post-tags">
-    <i class="sea-font">tag</i>
-    <a class="tag-link" href="/tags/windows/" rel="tag">windows</a>
-  </div>
-
-      </div>
-      
-    </div>
-  
-    <div class="sea-post-item" style="animation-delay: 0.3s;">
-      <h2 class="sea-post-title">
-        <a class="sea-post-link" href="/2024/06/26/markdown%E5%AD%A6%E4%B9%A0/">
-          markdown学习
-        </a>
-      </h2>
-      <div class="sea-post-line"></div>
-      <div class="sea-post-abstract">
-        
-        在学习HTML时顺带学习了下markdown，于是就有了这个。
-
-一级标题
-#
-二级标题
-##
-三级标题
-###
-四级标题
-####
-五级标题
-#####
-
-      </div>
-      <div class="sea-post-meta">
-        <div class="sea-post-time">
-  <i class="sea-font">date</i>
-  <time datetime="2024-06-26T01:22:23.000Z">2024-06-26</time>
-</div>
         
         
-  <div class="sea-post-tags">
-    <i class="sea-font">tag</i>
-    <a class="tag-link" href="/tags/study/" rel="tag">study</a>
-  </div>
+    </div>
 
-      </div>
-      
-    </div>
-  
-
-  
-
-</section>
-  </main>
-  <footer id="sea-footer-container">
-  <div class="sea-footer-row">
-    <div class="sea-footer-menu-link">
-      
-    </div>
-  </div>
-  
-  
-  <div class="sea-footer-row">
-    <div class="sea-footer-copyright">
-      <span>©</span>
-      
-        2024
-      
-      <span>·</span>
-      QSLS
-    </div>
-    <span class="split-line">|</span>
-    <div class="sea-footer-theme-by">
-      Theme by <a class="theme" href="https://github.com/hai-zou/hexo-theme-sea" target="_blank">Sea</a>
-    </div>
-  </div>
-</footer>
-  <div class="sea-menu-mobile-wrap">
-  <div class="sea-menu-mobile-inner">
     
-      <a
-        class="sea-menu-link"
-        
-        href="/archives/"
-      >
-        归档
-      </a>
+        <a class="home-read-more" href="/2024/06/26/%E4%BC%98%E5%8C%96windows/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
-      <a
-        class="sea-menu-link"
-        
-        href="/about/"
-      >
-        关于
-      </a>
-    
-  </div>
 </div>
-<div id="sea-mobile-nav-dimmer"></div>
-  <div class="sea-float-tools-wrapper">
-  
-  <a class="sea-float-tools-btn" id="sea-back-to-top" href="#">
-    <i class="sea-font">arrow_up</i>
-  </a>
 
-  
-  
+                </div>
+            </li>
+        
+            <li class="home-post-item">
 
-  
-  <div class="sea-float-tools-btn" id="sea-theme-mode">
-    <i class="sea-font">theme</i>
+                
 
-    <ul class="sea-theme-select-box">
-      <li class="sea-theme-select-item" id="sea-theme-auto">跟随系统</li>
-      <li class="sea-theme-select-item" id="sea-theme-light">浅色模式</li>
-      <li class="sea-theme-select-item" id="sea-theme-dark">深色模式</li>
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/06/26/markdown%E5%AD%A6%E4%B9%A0/">
+                            markdown学习
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            学习记录的markdown语法
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
+                                                                                data-updated="Sat Aug 24 2024 16:05:19 GMT+0800"
+                >2024年08月24日 16:05:19</span>
+            </span>
+        
+
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/study/">study</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/06/26/markdown%E5%AD%A6%E4%B9%A0/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
     </ul>
-  </div>
+    
+
+
+
 </div>
 
-  
-<script src="/js/theme.js"></script>
 
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">QSLS</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+        </div>
+    
+
+    
+        <div class="count-info info-item">
+            
+                <span class="count-item border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">2.4k</span>
+                </span>
+            
+
+            
+
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box side-tools-show-handle">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
 
 <script src="/js/main.js"></script>
 
+<script src="/js/libs/anime.min.js"></script>
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+        
+<script src="/js/page/home-page.js"></script>
+
+    
+
+    <!-- post page -->
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
 </body>
 </html>
