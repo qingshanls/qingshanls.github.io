@@ -9,7 +9,7 @@
     
     <title>
         
-            Hexo 添加番剧列表 |
+            hexo-git备份 |
         
         QSLSの站
     </title>
@@ -275,7 +275,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Hexo 添加番剧列表
+                        hexo-git备份
                     </div>
                 
 
@@ -303,12 +303,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-09-09 21:16:06</span>
+                <span class="datetime">2024-09-23 21:45:59</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Sep 23 2024 22:21:01 GMT+0800">2024-09-23 22:21:01</span>
+                <span class="datetime" data-updated="Mon Sep 23 2024 22:12:50 GMT+0800">2024-09-23 22:12:50</span>
             </span>
         
 
@@ -350,37 +350,23 @@
                     
 
                     
-                         <h1>本站此插件有冲突无法使用😅待修复...</h1>
-<h3 id="安装hexo-bilibili-bangumi插件"><a class="markdownIt-Anchor" href="#安装hexo-bilibili-bangumi插件"></a> 安装hexo-bilibili-bangumi插件</h3>
-<p>Github<a href="https://github.com/HCLonely/hexo-bilibili-bangumi">hexo- bilibili- bangumi</a></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo<span class="literal">-bilibili-bangumi</span> <span class="literal">--save</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
-<p>将以下信息写入hexo配置文件<code>_config.yml</code>中，</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bangumi:</span> <span class="comment"># 追番设置</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">source:</span> <span class="string">bili</span></span><br><span class="line">  <span class="attr">bgmInfoSource:</span> <span class="string">&#x27;bgmv0&#x27;</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">vmid:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;追番列表&#x27;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，追番不止！&#x27;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">srcValue:</span> <span class="string">&#x27;__image__&#x27;</span></span><br><span class="line">  <span class="attr">lazyloadAttrName:</span> <span class="string">&#x27;data-src=__image__&#x27;</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">showMyComment:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">pagination:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">progressBar:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">order:</span> <span class="string">latest</span></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">&#x27;代理host&#x27;</span></span><br><span class="line">    <span class="attr">port:</span> <span class="string">&#x27;代理端口&#x27;</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">value</span></span><br><span class="line">  <span class="attr">coverMirror:</span></span><br><span class="line"><span class="attr">cinema:</span> <span class="comment"># 追剧设置</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">vmid:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;追剧列表&#x27;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，追剧不止！&#x27;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">srcValue:</span> <span class="string">&#x27;__image__&#x27;</span></span><br><span class="line">  <span class="attr">lazyloadAttrName:</span> <span class="string">&#x27;data-src=__image__&#x27;</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">progressBar:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">order:</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">value</span></span><br><span class="line">  <span class="attr">coverMirror:</span></span><br><span class="line"><span class="attr">game:</span> <span class="comment"># 游戏设置，仅支持source: bgmv0</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">source:</span> <span class="string">bgmv0</span></span><br><span class="line">  <span class="attr">vmid:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;游戏列表&#x27;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，游戏不止！&#x27;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">srcValue:</span> <span class="string">&#x27;__image__&#x27;</span></span><br><span class="line">  <span class="attr">lazyloadAttrName:</span> <span class="string">&#x27;data-src=__image__&#x27;</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">progressBar:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">order:</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">value</span></span><br><span class="line">  <span class="attr">coverMirror:</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>具体配置信息参考 <a href="https://github.com/HCLonely/hexo-bilibili-bangumi">GitHub</a></p>
-</blockquote>
-<h3 id="创建页面"><a class="markdownIt-Anchor" href="#创建页面"></a> 创建页面</h3>
-<p>番</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page bangumis</span><br></pre></td></tr></table></figure>
-<p>剧</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page cinemans</span><br></pre></td></tr></table></figure>
-<p>在主题文件配置中添加</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span> </span><br><span class="line">    <span class="string">...</span></span><br><span class="line">     <span class="string">番剧:</span> </span><br><span class="line">      <span class="attr">icon:</span> <span class="string">fa-brands</span> <span class="string">fa-youtube</span></span><br><span class="line">      <span class="attr">children:</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">追番:</span> <span class="string">/bangumis</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">追剧:</span> <span class="string">/cinemas</span></span><br></pre></td></tr></table></figure>
-<h3 id="加载数据"><a class="markdownIt-Anchor" href="#加载数据"></a> 加载数据</h3>
-<p>运行部署前需加载一次番剧数据。</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo bangumi <span class="literal">-u</span> &amp;&amp; hexo cinema <span class="literal">-u</span> &amp;&amp; hexo clean &amp;&amp; hexo g <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
-<p>部署运行后查看是否有追番追剧列表。<br><br />
-样式参考</p>
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="/image/2024-09-09.png"
-                        alt=" " 
-                 ></p>
-<blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.qingshanls.icu/bangumis" >我的追番<i class="fas fa-external-link-alt"></i></a>​</p>
-</blockquote>
+                         <h3 id="使用GitHub来备份hexo的源码">使用GitHub来备份hexo的源码</h3>
+<p>前提条件：已成功搭建完成并部署hexo</p>
+<h3 id="创建GitHub仓库">创建GitHub仓库</h3>
+<p>1.登录GitHub并创建仓库，设置为私密<br>
+2.在hexo根目录创建<code>.gitignore</code>文件，设置要忽略的文件或文件夹，填写不需要备份的文件和文件夹。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line">_multiconfig.yml</span><br><span class="line">package-lock.json</span><br></pre></td></tr></table></figure>
+<p>3.使用git备份源文件到GitHub</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add *</span><br><span class="line">git commit <span class="literal">-m</span> <span class="string">&quot;<span class="variable">$</span>(date): Hexo backup&quot;</span></span><br><span class="line">git remote add origin https://github.com/username/hexo.git</span><br><span class="line">git push <span class="literal">-u</span> origin main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如需同时使用gitee</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将上面最后两行换为:</span></span><br><span class="line">git remote add gitee https://gitee.com/username/hexo.git</span><br><span class="line">git push <span class="literal">-u</span> gitee main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="恢复">恢复</h3>
+<p>1.将备份的仓库克隆到本地</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/hexo.git ./hexo</span><br><span class="line"></span><br><span class="line">git clone https://gitee.com/username/hexo.git ./hexo</span><br></pre></td></tr></table></figure>
+<p>2.使用备份的 package.json 文件来恢复安装 Hexo 插件，使用 npm 进行安装：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>这将读取 package.json 文件中的依赖项列表，并下载并安装所需的插件和模块。</p>
+<p>3.生成静态网页并部署即可。</p>
 
                     
                 </div>
@@ -413,31 +399,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/09/17/archinstall-guide/"
-                                   title="使用 ArchInstall 安装 Arch Linux"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">使用 ArchInstall 安装 Arch Linux</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/08/24/TEST/"
-                                   title="MATH TEST"
+                                   href="/2024/09/17/archinstall-guide/"
+                                   title="使用 ArchInstall 安装 Arch Linux"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">MATH TEST</span>
+                                        <span class="post-nav-title-item text-ellipsis">使用 ArchInstall 安装 Arch Linux</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -465,7 +435,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">本站此插件有冲突无法使用😅待修复...</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-bilibili-bangumi%E6%8F%92%E4%BB%B6"><span class="nav-text"> 安装hexo-bilibili-bangumi插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text"> 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="nav-text"> 创建页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-text"> 加载数据</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8GitHub%E6%9D%A5%E5%A4%87%E4%BB%BDhexo%E7%9A%84%E6%BA%90%E7%A0%81"><span class="nav-text">使用GitHub来备份hexo的源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAGitHub%E4%BB%93%E5%BA%93"><span class="nav-text">创建GitHub仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D"><span class="nav-text">恢复</span></a></li></ol>
     </div>
 </div>
 
@@ -616,7 +586,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">本站此插件有冲突无法使用😅待修复...</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-bilibili-bangumi%E6%8F%92%E4%BB%B6"><span class="nav-text"> 安装hexo-bilibili-bangumi插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text"> 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="nav-text"> 创建页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-text"> 加载数据</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8GitHub%E6%9D%A5%E5%A4%87%E4%BB%BDhexo%E7%9A%84%E6%BA%90%E7%A0%81"><span class="nav-text">使用GitHub来备份hexo的源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAGitHub%E4%BB%93%E5%BA%93"><span class="nav-text">创建GitHub仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D"><span class="nav-text">恢复</span></a></li></ol>
     </div>
 </div>
 
