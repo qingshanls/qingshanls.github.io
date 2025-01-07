@@ -336,35 +336,35 @@
                     
 
                     
-                         <h2 id="windows1011系统优化"><a class="markdownIt-Anchor" href="#windows1011系统优化"></a> Windows10/11系统优化</h2>
+                         <h2 id="Windows10-11系统优化">Windows10/11系统优化</h2>
 <p>去除信息流和关闭更新来源:<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FM4y1i76d/?p=1&amp;vd_source=09cd1af7ac0e435034b4adc341939d21" >更新能永久暂停？盘点两个奇特的Windows使用技巧<i class="fas fa-external-link-alt"></i></a></p>
-<h4 id="1去除搜索页面信息流和热搜"><a class="markdownIt-Anchor" href="#1去除搜索页面信息流和热搜"></a> 1.去除搜索页面信息流和热搜</h4>
+<h4 id="1-去除搜索页面信息流和热搜">1.去除搜索页面信息流和热搜</h4>
 <p>去除信息流：</p>
 <p>Windows10:任务栏右键-&gt;搜索-&gt;搜索突出显示 [关闭]</p>
 <p>Windows11:设置-&gt;隐私和安全-&gt;更多设置-&gt;显示搜索要点 [关闭]</p>
 <p>去除热搜：导入以下内容到注册表</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\explorer]</span><br><span class="line">&quot;DisableSearchBoxSuggestions&quot;=dword:00000001</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f</span><br></pre></td></tr></table></figure>
-<h4 id="2永久关闭系统更新"><a class="markdownIt-Anchor" href="#2永久关闭系统更新"></a> 2.永久关闭系统更新</h4>
+<h4 id="2-永久关闭系统更新">2.永久关闭系统更新</h4>
 <p>关闭更新：导入以下内容到注册表后找到 “设置-&gt;Windows更新” 将暂停更新的天数调到最高</p>
 <p>恢复更新：找到 “设置-&gt;Windows更新” 点击 “继续更新”</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]</span><br><span class="line">&quot;FlightSettingsMaxPauseDays&quot;=dword:00000365</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings&quot; /v FlightSettingsMaxPauseDays /t reg_dword /d 3000 /f</span><br></pre></td></tr></table></figure>
-<h4 id="3windows激活"><a class="markdownIt-Anchor" href="#3windows激活"></a> 3.Windows激活</h4>
-<p>win+r 运行<br />
-输入powershell,回车<br />
+<h4 id="3-Windows激活">3.Windows激活</h4>
+<p>win+r 运行<br>
+输入powershell,回车<br>
 输入下方代码 ，按回车</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">irm https://massgrave.dev/get |iex</span><br></pre></td></tr></table></figure>
-<p>输入1，回车<br />
-出现以下三种情况就属于失败，需要采用手动下载的方式：<br />
-1、出现“Activation Failed Error Code: 0xC004C003” 字样<br />
-2、出现“无法解析”字样<br />
-3、执行命令行卡了很久没反应：<br />
+<p>输入1，回车<br>
+出现以下三种情况就属于失败，需要采用手动下载的方式：<br>
+1、出现“Activation Failed Error Code: 0xC004C003” 字样<br>
+2、出现“无法解析”字样<br>
+3、执行命令行卡了很久没反应：<br>
 直接下载这个链接的压缩包:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip</span><br></pre></td></tr></table></figure>
-<p>1、右键单击下载的 zip 文件并解压<br />
-2、在解压后的文件夹中，找到名为的文件夹  <code>All-In-One-Version</code><br />
-3、以管理员身份运行，运行文件名为 <code>MAS_AIO.cmd</code><br />
+<p>1、右键单击下载的 zip 文件并解压<br>
+2、在解压后的文件夹中，找到名为的文件夹  <code>All-In-One-Version</code><br>
+3、以管理员身份运行，运行文件名为 <code>MAS_AIO.cmd</code><br>
 4、您将看到激活选项，然后按照屏幕上的说明进行操作</p>
 
                     
@@ -450,7 +450,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows1011%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text"> Windows10&#x2F;11系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E5%8E%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF%E6%B5%81%E5%92%8C%E7%83%AD%E6%90%9C"><span class="nav-text"> 1.去除搜索页面信息流和热搜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text"> 2.永久关闭系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3windows%E6%BF%80%E6%B4%BB"><span class="nav-text"> 3.Windows激活</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows10-11%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text">Windows10&#x2F;11系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%8E%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF%E6%B5%81%E5%92%8C%E7%83%AD%E6%90%9C"><span class="nav-text">1.去除搜索页面信息流和热搜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text">2.永久关闭系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Windows%E6%BF%80%E6%B4%BB"><span class="nav-text">3.Windows激活</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -492,7 +492,7 @@
             
                 <span class="count-item border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">10k</span>
+                    <span class="item-value border-box word">4.8k</span>
                 </span>
             
 
@@ -601,7 +601,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows1011%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text"> Windows10&#x2F;11系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E5%8E%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF%E6%B5%81%E5%92%8C%E7%83%AD%E6%90%9C"><span class="nav-text"> 1.去除搜索页面信息流和热搜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text"> 2.永久关闭系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3windows%E6%BF%80%E6%B4%BB"><span class="nav-text"> 3.Windows激活</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows10-11%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96"><span class="nav-text">Windows10&#x2F;11系统优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%8E%BB%E9%99%A4%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF%E6%B5%81%E5%92%8C%E7%83%AD%E6%90%9C"><span class="nav-text">1.去除搜索页面信息流和热搜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0"><span class="nav-text">2.永久关闭系统更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Windows%E6%BF%80%E6%B4%BB"><span class="nav-text">3.Windows激活</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
