@@ -9,7 +9,7 @@
     
     <title>
         
-            Hexo 添加番剧列表 |
+            CAD命令 |
         
         QSLSの站
     </title>
@@ -259,7 +259,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Hexo 添加番剧列表
+                        CAD命令
                     </div>
                 
 
@@ -287,13 +287,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-09-09 21:16:06</span>
+                <span class="datetime">2025-02-22 14:53:37</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Mon Sep 23 2024 22:21:01 GMT+0800">2024-09-23 22:21:01</span>
+                    <span class="datetime" data-updated="Mon Feb 24 2025 14:26:31 GMT+0800">2025-02-24 14:26:31</span>
                 </span>
             
         
@@ -304,10 +304,10 @@
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/hexo/">hexo</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/CAD/">CAD</a></li>
                         
                     
                 </ul>
@@ -336,37 +336,174 @@
                     
 
                     
-                         <h1>本站此插件有冲突无法使用😅待修复...</h1>
-<h3 id="安装hexo-bilibili-bangumi插件"><a class="markdownIt-Anchor" href="#安装hexo-bilibili-bangumi插件"></a> 安装hexo-bilibili-bangumi插件</h3>
-<p>Github<a href="https://github.com/HCLonely/hexo-bilibili-bangumi">hexo- bilibili- bangumi</a></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo<span class="literal">-bilibili-bangumi</span> <span class="literal">--save</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
-<p>将以下信息写入hexo配置文件<code>_config.yml</code>中，</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bangumi:</span> <span class="comment"># 追番设置</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">source:</span> <span class="string">bili</span></span><br><span class="line">  <span class="attr">bgmInfoSource:</span> <span class="string">&#x27;bgmv0&#x27;</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">vmid:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;追番列表&#x27;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，追番不止！&#x27;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">srcValue:</span> <span class="string">&#x27;__image__&#x27;</span></span><br><span class="line">  <span class="attr">lazyloadAttrName:</span> <span class="string">&#x27;data-src=__image__&#x27;</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">showMyComment:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">pagination:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">progressBar:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">order:</span> <span class="string">latest</span></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">&#x27;代理host&#x27;</span></span><br><span class="line">    <span class="attr">port:</span> <span class="string">&#x27;代理端口&#x27;</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">value</span></span><br><span class="line">  <span class="attr">coverMirror:</span></span><br><span class="line"><span class="attr">cinema:</span> <span class="comment"># 追剧设置</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">vmid:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;追剧列表&#x27;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，追剧不止！&#x27;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">srcValue:</span> <span class="string">&#x27;__image__&#x27;</span></span><br><span class="line">  <span class="attr">lazyloadAttrName:</span> <span class="string">&#x27;data-src=__image__&#x27;</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">progressBar:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">order:</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">value</span></span><br><span class="line">  <span class="attr">coverMirror:</span></span><br><span class="line"><span class="attr">game:</span> <span class="comment"># 游戏设置，仅支持source: bgmv0</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">source:</span> <span class="string">bgmv0</span></span><br><span class="line">  <span class="attr">vmid:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&#x27;游戏列表&#x27;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&#x27;生命不息，游戏不止！&#x27;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">srcValue:</span> <span class="string">&#x27;__image__&#x27;</span></span><br><span class="line">  <span class="attr">lazyloadAttrName:</span> <span class="string">&#x27;data-src=__image__&#x27;</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">progressBar:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">order:</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">value</span></span><br><span class="line">  <span class="attr">coverMirror:</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>具体配置信息参考 <a href="https://github.com/HCLonely/hexo-bilibili-bangumi">GitHub</a></p>
-</blockquote>
-<h3 id="创建页面"><a class="markdownIt-Anchor" href="#创建页面"></a> 创建页面</h3>
-<p>番</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page bangumis</span><br></pre></td></tr></table></figure>
-<p>剧</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page cinemans</span><br></pre></td></tr></table></figure>
-<p>在主题文件配置中添加</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span> </span><br><span class="line">    <span class="string">...</span></span><br><span class="line">     <span class="string">番剧:</span> </span><br><span class="line">      <span class="attr">icon:</span> <span class="string">fa-brands</span> <span class="string">fa-youtube</span></span><br><span class="line">      <span class="attr">children:</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">追番:</span> <span class="string">/bangumis</span></span><br><span class="line">           <span class="bullet">-</span> <span class="string">追剧:</span> <span class="string">/cinemas</span></span><br></pre></td></tr></table></figure>
-<h3 id="加载数据"><a class="markdownIt-Anchor" href="#加载数据"></a> 加载数据</h3>
-<p>运行部署前需加载一次番剧数据。</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo bangumi <span class="literal">-u</span> &amp;&amp; hexo cinema <span class="literal">-u</span> &amp;&amp; hexo clean &amp;&amp; hexo g <span class="literal">-d</span></span><br></pre></td></tr></table></figure>
-<p>部署运行后查看是否有追番追剧列表。<br><br />
-样式参考</p>
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="/image/2024-09-09.png"
-                        alt=" " 
-                 ></p>
-<blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.qingshanls.icu/bangumis" >我的追番<i class="fas fa-external-link-alt"></i></a>​</p>
-</blockquote>
+                         <h2 id="一、常用功能键">一、常用功能键</h2>
+<p>F1: 获取帮助</p>
+<p>F2: 实现作图窗和文本窗口的切换</p>
+<p>F3: 控制是否实现对象自动捕捉</p>
+<p>F4: 数字化仪控制</p>
+<p>F5: 等轴测平面切换</p>
+<p>F6: 控制状态行上坐标的显示方式</p>
+<p>F7: 栅格显示模式控制</p>
+<p>F8: 正交模式控制</p>
+<p>F9: 栅格捕捉模式控制</p>
+<p>F10: 极轴模式控制</p>
+<p>F11: 对象追踪模式控制</p>
+<p>F12: 动态输入控制</p>
+<p>(用ALT+字母可快速选择命令，这种方法可快捷操作大多数软件。)</p>
+<h2 id="二、常用CTRL，ALT快捷键">二、常用CTRL，ALT快捷键</h2>
+<p>ALT+TK 如快速选择</p>
+<p>ALT+NL 线性标注 ALT+VV4 快速创建四个视口</p>
+<p>ALT+MUP提取轮廓</p>
+<p>Ctrl+B: 栅格捕捉模式控制(F9)</p>
+<p>Ctrl+C: 将选择的对象复制到剪切板上</p>
+<p>Ctrl+F: 控制是否实现对象自动捕捉(F3)</p>
+<p>Ctrl+G: 栅格显示模式控制(F7)</p>
+<p>Ctrl+J: 重复执行上一步命令</p>
+<p>Ctrl+K: 超级链接</p>
+<p>Ctrl+N: 新建图形文件</p>
+<p>Ctrl+M: 打开选项对话框</p>
+<p>Ctrl+O：打开图象文件</p>
+<p>Ctrl+P：打开打印对说框</p>
+<p>Ctrl+S：保存文件</p>
+<p>Ctrl+U：极轴模式控制(F10)</p>
+<p>Ctrl+v：粘贴剪贴板上的内容</p>
+<p>Ctrl+W：对象追 踪式控制(F11)</p>
+<p>Ctrl+X：剪切所选择的内容</p>
+<p>Ctrl+Y：重做</p>
+<p>Ctrl+Z：取消前一步的操作</p>
+<p>Ctrl+1：打开特性对话框</p>
+<p>Ctrl+2：打开图象资源管理器</p>
+<p>Ctrl+3：打开工具选项板</p>
+<p>Ctrl+6：打开图象数据原子</p>
+<p>Ctrl+8或QC：快速计算器</p>
+<h2 id="三-、尺寸标注">三 、尺寸标注</h2>
+<p>DRA：半径标注</p>
+<p>DDI：直径标注</p>
+<p>DAL：对齐标注</p>
+<p>DAN：角度标注</p>
+<p>END：捕捉到端点</p>
+<p>MID：捕捉到中点</p>
+<p>INT：捕捉到交点</p>
+<p>CEN：捕捉到圆心</p>
+<p>QUA：捕捉到象限点</p>
+<p>TAN：捕捉到切点</p>
+<p>PER：捕捉到垂足</p>
+<p>NOD：捕捉到节点</p>
+<p>NEA：捕捉到最近点</p>
+<p>AA：测量区域和周长(area)</p>
+<p>ID：指定坐标</p>
+<p>LI：指定集体(个体)的坐标</p>
+<p>AL：对齐(align)</p>
+<p>AR： 阵列(array)</p>
+<p>AP：加载*lsp程系</p>
+<p>AV：打开视图对话框(dsviewer)</p>
+<p>SE：打开对象自动捕捉对话框</p>
+<p>ST：打开字体设置对话框(style)</p>
+<p>SO：绘制二围面( 2d solid)</p>
+<p>SP：拼音的校核(spell)</p>
+<p>SC：缩放比例 (scale)</p>
+<p>SN：栅格捕捉模式设置(snap)</p>
+<p>DT：文本的设置(dtext)</p>
+<p>DI：测量两点间的距离</p>
+<p>OI：插入外部对象</p>
+<p>RE：更新显示</p>
+<p>RO：旋转</p>
+<p>LE：引线标注</p>
+<p>ST：单行文本输入</p>
+<p>La：图层管理器</p>
+<h2 id="四-、绘图命令">四 、绘图命令</h2>
+<p>A：绘圆弧</p>
+<p>B：定义块</p>
+<p>C：画圆</p>
+<p>D：尺寸资源管理器</p>
+<p>E：删除</p>
+<p>F：倒圆角</p>
+<p>G：对相组合</p>
+<p>H：填充</p>
+<p>I：插入</p>
+<p>J：对接</p>
+<p>S：拉伸</p>
+<p>T：多行文本输入</p>
+<p>W：定义块并保存到硬盘中</p>
+<p>L：直线</p>
+<p>M：移动</p>
+<p>X：炸开</p>
+<p>V：设置当前坐标</p>
+<p>U：恢复上一次操做</p>
+<p>O：偏移</p>
+<h2 id="五、常见标注">五、常见标注</h2>
+<p>内部标注：DDZ</p>
+<p>柜子标注：DDGZ</p>
+<p>面积标注：ML</p>
+<p>多段线标注：DDZZ</p>
+<p>外部标注：AZH</p>
+<h2 id="六、15个快捷键命令">六、15个快捷键命令</h2>
+<p>1、 线</p>
+<p>命令：line</p>
+<p>快捷命令：L</p>
+<p>操作方式：输入L→空格→屏幕上点第一点→点第二点 点第三点 空格 完毕，当然你也可以无休止的画下去。</p>
+<p>2、 复制</p>
+<p>命令：copy</p>
+<p>快捷命令：CO</p>
+<p>操作方式：输入CO→空格→选择物体→空格→选择基准点→选择要复制到什么地方→空格结束。</p>
+<p>3、 移动</p>
+<p>命令：MOVE</p>
+<p>快捷命令：M</p>
+<p>操作方式：输入M→空格→选择物体→空格→选择基准点→选择要移动到什么地方→空格结束。</p>
+<p>4、 圆</p>
+<p>命令：CIRCLE</p>
+<p>快捷命令：C</p>
+<p>操作方式：输入C→空格→点一点→输入直径→空格或者拉鼠标，点左键确定。</p>
+<p>5、 偏移</p>
+<p>命令：OFFSET</p>
+<p>快捷命令：O</p>
+<p>操作方式：输入O→空格→输入偏移的距离→空格→选择要偏移的物体→在要偏移的方向上点鼠标。</p>
+<p>6、 格式刷</p>
+<p>命令：MATCHPROP</p>
+<p>快捷命令：MA</p>
+<p>操作方式：输入MA→空格→选择基准物体→选择要刷的物体。</p>
+<p>7、 查看属性</p>
+<p>命令：PROPERTIES</p>
+<p>快捷命令：MO</p>
+<p>操作方式：输入mo→选择物体。</p>
+<p>8、 阵列</p>
+<p>命令：array</p>
+<p>快捷命令：AR</p>
+<p>操作方式：输入AR→空格→出现对话框。</p>
+<p>9、 延长</p>
+<p>命令：EXTEND</p>
+<p>快捷命令：EX</p>
+<p>操作方式：输入EX→空格→选择想延长到那儿→空格→选择被延长的线。</p>
+<p>10、 剪切</p>
+<p>命令：TRIM</p>
+<p>快捷命令：TR</p>
+<p>操作方式：输入TR→空格→选择想剪切哪儿→空格→选择被剪切的线。</p>
+<p>11、 删除</p>
+<p>命令：ERASE</p>
+<p>快捷命令：E</p>
+<p>操作方式: 输入E→空格→选择物体→空格。</p>
+<p>12、 反悔</p>
+<p>命令：U</p>
+<p>操作方式：输入U→空格。只要CAD没关过，可以一直反悔到打开图纸时的状态</p>
+<p>13、 炸开</p>
+<p>命令：EXPLODE</p>
+<p>快捷命令：X</p>
+<p>操作方式：输入X→空格→选择物体。</p>
+<p>14、 拉伸</p>
+<p>命令：STRETCH</p>
+<p>快捷命令：S</p>
+<p>操作方式：输入S→用右下左上的方式拉出一个框让左边的竖线或者上边的横线与被拉部分相交，空格→选择一个基本点，输入距离或者指定下一点。</p>
+<p>15、 镜像</p>
+<p>命令：MIRROR</p>
+<p>快捷命令：MI</p>
+<p>操作方式： 输入MI 选择要镜像的物体，选择“镜子“的第一点，选择”镜子“的第二点，空格，得到了一个以你选择的两点为对称轴的图像。</p>
+<h2 id="七、">七、%%+</h2>
+<p>%%d = °</p>
+<p>%%c = Ø</p>
+<p>%%p = ±</p>
+<p>%%u = _____</p>
+<p>%%o = ¯¯¯¯¯</p>
+<p>转自 <a href="www.allfunnies.com/articles/20201202_9011.html">CAD百科</a></p>
 
                     
                 </div>
@@ -379,11 +516,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/hexo/">hexo</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/CAD/">CAD</a>
                                     </li>
                                 
                             </ul>
@@ -399,31 +536,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/09/17/archinstall-guide/"
-                                   title="使用 ArchInstall 安装 Arch Linux"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">使用 ArchInstall 安装 Arch Linux</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/08/24/TEST/"
-                                   title="MATH TEST"
+                                   href="/2024/10/27/linux-win-time/"
+                                   title="Linux Win 双系统时间不同步"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">MATH TEST</span>
+                                        <span class="post-nav-title-item text-ellipsis">Linux Win 双系统时间不同步</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -451,7 +572,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">本站此插件有冲突无法使用😅待修复...</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-bilibili-bangumi%E6%8F%92%E4%BB%B6"><span class="nav-text"> 安装hexo-bilibili-bangumi插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text"> 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="nav-text"> 创建页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-text"> 加载数据</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E9%94%AE"><span class="nav-text">一、常用功能键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E7%94%A8CTRL%EF%BC%8CALT%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">二、常用CTRL，ALT快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E3%80%81%E5%B0%BA%E5%AF%B8%E6%A0%87%E6%B3%A8"><span class="nav-text">三 、尺寸标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E3%80%81%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4"><span class="nav-text">四 、绘图命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%B8%B8%E8%A7%81%E6%A0%87%E6%B3%A8"><span class="nav-text">五、常见标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%8115%E4%B8%AA%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%91%BD%E4%BB%A4"><span class="nav-text">六、15个快捷键命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81"><span class="nav-text">七、%%+</span></a></li></ol>
     </div>
 </div>
 
@@ -602,7 +723,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">本站此插件有冲突无法使用😅待修复...</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo-bilibili-bangumi%E6%8F%92%E4%BB%B6"><span class="nav-text"> 安装hexo-bilibili-bangumi插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-text"> 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="nav-text"> 创建页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-text"> 加载数据</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E9%94%AE"><span class="nav-text">一、常用功能键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E7%94%A8CTRL%EF%BC%8CALT%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-text">二、常用CTRL，ALT快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E3%80%81%E5%B0%BA%E5%AF%B8%E6%A0%87%E6%B3%A8"><span class="nav-text">三 、尺寸标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E3%80%81%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4"><span class="nav-text">四 、绘图命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%B8%B8%E8%A7%81%E6%A0%87%E6%B3%A8"><span class="nav-text">五、常见标注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%8115%E4%B8%AA%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%91%BD%E4%BB%A4"><span class="nav-text">六、15个快捷键命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81"><span class="nav-text">七、%%+</span></a></li></ol>
     </div>
 </div>
 
