@@ -1,1 +1,7 @@
-:root{--base-font-family:LXGWWenKaiMonoLite-Medium;--base-font-size:16px}
+/* your-hexo/source/css/custom.css */
+
+:root {
+    --base-font-family: LXGWWenKaiMonoLite-Medium;
+    --base-font-size: 16px;
+    /* --base-font-family: STKaiti; */
+}

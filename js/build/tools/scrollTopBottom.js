@@ -1,1 +1,2 @@
-export default()=>{var o=document.querySelector(".tool-scroll-to-top"),t=document.querySelector(".tool-scroll-to-bottom");o.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})}),t.addEventListener("click",()=>{var o=document.body.scrollHeight;window.scrollTo({top:o,behavior:"smooth"})})};
+let o=!1;const handleClick=o=>{if(o.target.closest(".tool-scroll-to-top"))return void window.scrollTo({top:0,behavior:"smooth"});o.target.closest(".tool-scroll-to-bottom")&&(()=>{const o=document.body.scrollHeight;window.scrollTo({top:o,behavior:"smooth"})})()};export default({signal:t}={})=>{o||(o=!0,t?document.addEventListener("click",handleClick,{signal:t}):document.addEventListener("click",handleClick))};
+//# sourceMappingURL=scrollTopBottom.js.map

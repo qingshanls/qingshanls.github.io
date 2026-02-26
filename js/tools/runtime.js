@@ -1,1 +1,46 @@
-let footerRuntime=()=>{var e=theme.footerStart,e=(window.setTimeout(footerRuntime,1e3),new Date(e)),e=((new Date).getTime()-e.getTime())/864e5,t=Math.floor(e),e=24*(e-t),n=Math.floor(e),o=60*(e-n),e=Math.floor(60*(e-n)),o=Math.floor(60*(o-e)),m=document.getElementById("runtime_days"),r=document.getElementById("runtime_hours"),i=document.getElementById("runtime_minutes"),d=document.getElementById("runtime_seconds");m&&(m.innerHTML=t),r&&(r.innerHTML=n),i&&(i.innerHTML=e),d&&(d.innerHTML=o)};window.addEventListener("DOMContentLoaded",footerRuntime);
+let runtimeActive = false;
+
+const footerRuntime = () => {
+  if (!runtimeActive) {
+    return;
+  }
+
+  const startTime = theme.footerStart;
+  if (!startTime) {
+    runtimeActive = false;
+    return;
+  }
+
+  window.setTimeout(footerRuntime, 1000);
+
+  const startDate = new Date(startTime);
+  const nowDate = new Date();
+  const diff = nowDate.getTime() - startDate.getTime();
+  const dayMs = 24 * 60 * 60 * 1000;
+  const daysFloat = diff / dayMs;
+  const days = Math.floor(daysFloat);
+  const hoursFloat = (daysFloat - days) * 24;
+  const hours = Math.floor(hoursFloat);
+  const minutesFloat = (hoursFloat - hours) * 60;
+  const minutes = Math.floor(minutesFloat);
+  const seconds = Math.floor((minutesFloat - minutes) * 60);
+
+  const runtimeDays = document.getElementById("runtime_days");
+  const runtimeHours = document.getElementById("runtime_hours");
+  const runtimeMinutes = document.getElementById("runtime_minutes");
+  const runtimeSeconds = document.getElementById("runtime_seconds");
+
+  if (runtimeDays) runtimeDays.innerHTML = days;
+  if (runtimeHours) runtimeHours.innerHTML = hours;
+  if (runtimeMinutes) runtimeMinutes.innerHTML = minutes;
+  if (runtimeSeconds) runtimeSeconds.innerHTML = seconds;
+};
+
+export default function initFooterRuntime() {
+  if (runtimeActive) {
+    return;
+  }
+
+  runtimeActive = true;
+  footerRuntime();
+}
