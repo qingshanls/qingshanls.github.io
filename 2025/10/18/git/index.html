@@ -546,34 +546,34 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="配置git"><a class="markdownIt-Anchor" href="#配置git"></a> 配置git</h2>
-<h3 id="1-添加全局git个人信息"><a class="markdownIt-Anchor" href="#1-添加全局git个人信息"></a> 1、添加全局git个人信息</h3>
+			<h2 id="配置git">配置git</h2>
+<h3 id="1、添加全局git个人信息">1、添加全局git个人信息</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">git config --global user.email email@email.com</span><br></pre></td></tr></table></figure></div>
 <p>不添加全局可去掉<code>--global</code>，配置文件在当前项目的<code>.git/config</code>文件内。</p>
-<h3 id="2-ssh-key"><a class="markdownIt-Anchor" href="#2-ssh-key"></a> 2、ssh key</h3>
+<h3 id="2、ssh-key">2、ssh key</h3>
 <p>本地创建sshkey</p>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;uyour_email@email.com&quot;</span>    <span class="comment"># 为你在github上注册的邮箱</span></span><br></pre></td></tr></table></figure></div>
 <p>之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在<code>~/</code>下生成<code>.ssh</code>文件夹，进去，打开<code>id_rsa.pub</code>，复制里面的<code>key</code>。回到github上，进入Account Settings（账户配置），左边选择SSH Keys，Add SSH Key,title随便填，粘贴在你电脑上生成的key。</p>
 <p>为了验证是否成功，在git bash下输入：</p>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
-<h3 id="3-添加远程仓库地址"><a class="markdownIt-Anchor" href="#3-添加远程仓库地址"></a> 3、添加远程仓库地址</h3>
+<h3 id="3、添加远程仓库地址">3、添加远程仓库地址</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:yourName/yourRepo.git</span><br></pre></td></tr></table></figure></div>
-<h2 id="git-命令"><a class="markdownIt-Anchor" href="#git-命令"></a> git 命令</h2>
-<h3 id="1-创建本地仓库"><a class="markdownIt-Anchor" href="#1-创建本地仓库"></a> 1、创建本地仓库</h3>
+<h2 id="git-命令">git 命令</h2>
+<h3 id="1、创建本地仓库">1、创建本地仓库</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> project</span><br><span class="line"><span class="built_in">cd</span> project</span><br><span class="line"></span><br><span class="line">git init    <span class="comment"># 初始化仓库</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="2-远程仓库"><a class="markdownIt-Anchor" href="#2-远程仓库"></a> 2、远程仓库</h3>
+<h3 id="2、远程仓库">2、远程仓库</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://githun.com/username/repo.git    <span class="comment"># 克隆远程仓库</span></span><br><span class="line"><span class="built_in">cd</span> repo</span><br><span class="line"></span><br><span class="line">git remote    <span class="comment"># 查看当前的远程库</span></span><br><span class="line">git remote -v    <span class="comment"># 查看当前的远程库地址</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="3-分支"><a class="markdownIt-Anchor" href="#3-分支"></a> 3、分支</h3>
+<h3 id="3、分支">3、分支</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b  new-feature    <span class="comment"># 创建并切换至new-feature分支</span></span><br><span class="line">git checkout main    <span class="comment"># 切换至main分支</span></span><br><span class="line">git branch    <span class="comment"># 查看所有分支</span></span><br><span class="line">git branch -r    <span class="comment"># 查看远程分支</span></span><br><span class="line">git branch -a    <span class="comment"># 查看所有本地和远程分支</span></span><br><span class="line">git branch testing    <span class="comment"># 创建testing分支</span></span><br><span class="line">git branch -d testing    <span class="comment"># 删除testing分支</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="4-暂存文件"><a class="markdownIt-Anchor" href="#4-暂存文件"></a> 4、暂存文件</h3>
+<h3 id="4、暂存文件">4、暂存文件</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改的文件</span></span><br><span class="line">git add filename</span><br><span class="line"><span class="comment"># 所有修改的文件</span></span><br><span class="line">git add .</span><br></pre></td></tr></table></figure></div>
-<h3 id="5-提交更改"><a class="markdownIt-Anchor" href="#5-提交更改"></a> 5、提交更改</h3>
+<h3 id="5、提交更改">5、提交更改</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commite -m <span class="string">&quot;add new&quot;</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="6-拉取最新更改"><a class="markdownIt-Anchor" href="#6-拉取最新更改"></a> 6、拉取最新更改</h3>
+<h3 id="6、拉取最新更改">6、拉取最新更改</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure></div>
-<h3 id="7-推送更改"><a class="markdownIt-Anchor" href="#7-推送更改"></a> 7、推送更改</h3>
+<h3 id="7、推送更改">7、推送更改</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin main</span><br></pre></td></tr></table></figure></div>
-<h3 id="8-查看状态"><a class="markdownIt-Anchor" href="#8-查看状态"></a> 8、查看状态</h3>
+<h3 id="8、查看状态">8、查看状态</h3>
 <div class="code-container" data-rel="Zsh"><figure class="iseeu highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
 
 		</div>
@@ -726,7 +726,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">git</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="nav-text"> 配置git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80git%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="nav-text"> 1、添加全局git个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ssh-key"><span class="nav-text"> 2、ssh key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-text"> 3、添加远程仓库地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-%E5%91%BD%E4%BB%A4"><span class="nav-text"> git 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="nav-text"> 1、创建本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-text"> 2、远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%86%E6%94%AF"><span class="nav-text"> 3、分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9A%82%E5%AD%98%E6%96%87%E4%BB%B6"><span class="nav-text"> 4、暂存文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%94%B9"><span class="nav-text"> 5、提交更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%8B%89%E5%8F%96%E6%9C%80%E6%96%B0%E6%9B%B4%E6%94%B9"><span class="nav-text"> 6、拉取最新更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%8E%A8%E9%80%81%E6%9B%B4%E6%94%B9"><span class="nav-text"> 7、推送更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81"><span class="nav-text"> 8、查看状态</span></a></li></ol></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="nav-text">配置git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80git%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="nav-text">1、添加全局git个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81ssh-key"><span class="nav-text">2、ssh key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-text">3、添加远程仓库地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-%E5%91%BD%E4%BB%A4"><span class="nav-text">git 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="nav-text">1、创建本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-text">2、远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%88%86%E6%94%AF"><span class="nav-text">3、分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E6%9A%82%E5%AD%98%E6%96%87%E4%BB%B6"><span class="nav-text">4、暂存文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%94%B9"><span class="nav-text">5、提交更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E6%8B%89%E5%8F%96%E6%9C%80%E6%96%B0%E6%9B%B4%E6%94%B9"><span class="nav-text">6、拉取最新更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E6%8E%A8%E9%80%81%E6%9B%B4%E6%94%B9"><span class="nav-text">7、推送更改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81"><span class="nav-text">8、查看状态</span></a></li></ol></li></ol>
 
 	</div>
 </div>
@@ -758,7 +758,7 @@
                     </span>
                     
                         <span>
-                            共 12k 字
+                            共 11.5k 字
                         </span>
                     
                 </p>
