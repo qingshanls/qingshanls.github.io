@@ -94,7 +94,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2026-04-05T08:34:12.000Z">
-<meta property="article:modified_time" content="2026-04-05T12:16:43.735Z">
+<meta property="article:modified_time" content="2026-04-19T12:39:08.687Z">
 <meta property="article:author" content="QSLS">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -568,8 +568,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2026-04-05 20:16:43</span>
-            <span class="mobile">2026-04-05 20:16:43</span>
+            <span class="desktop">2026-04-19 20:39:08</span>
+            <span class="mobile">2026-04-19 20:39:08</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -590,9 +590,13 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>671 字</span>
+        </span>
+    
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -611,7 +615,47 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			
+			<h1>用 chezmoi 优雅管理你的跨设备 Dotfiles</h1>
+<h2 id="快速开始">快速开始</h2>
+<h3 id="1-安装-chezmoi">1. 安装 chezmoi</h3>
+<p>chezmoi 是一个独立的静态二进制文件，无任何依赖，无需 root 权限。你可以选择以下方式之一安装：</p>
+<p><strong>方式一：使用 Curl（推荐用于快速上手）</strong></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsLS https://get.chezmoi.io)</span>&quot;</span> -- init --apply <span class="variable">$GITHUB_USERNAME</span></span><br></pre></td></tr></table></figure></div>
+<p>这条命令会直接从你的 GitHub 用户仓库 (<code>$GITHUB_USERNAME</code>) 拉取 dotfiles 并立即应用。</p>
+<p><strong>方式二：使用包管理器</strong> chezmoi 支持所有主流操作系统包管理器</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># macOS (Homebrew)</span></span><br><span class="line">brew install chezmoi</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ubuntu/Debian</span></span><br><span class="line"><span class="built_in">sudo</span> apt install chezmoi</span><br><span class="line"></span><br><span class="line"><span class="comment"># Arch Linux</span></span><br><span class="line"><span class="built_in">sudo</span> pacman -S chezmoi</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows (Winget)</span></span><br><span class="line">winget install chezmoi.chezmoi</span><br></pre></td></tr></table></figure></div>
+<p>更多安装方式请查阅 <a class="link"   target="_blank" rel="noopener" href="https://www.chezmoi.io/install/" >官方安装指南</a>。</p>
+<h3 id="2-使用">2. 使用</h3>
+<ol>
+<li><code>chezmoi init</code>: 该命令会在<code>~/.local/share/chezmoi</code>下初始化一个 Git 仓库。</li>
+<li><code>chezmoi add ~/.zshrc</code>: 将<code>~/.zshrc</code>纳入 chezmoi 的管理。其在<code>~/.local/share/chezmoi</code>下对应的文件是<code>dot_bashrc</code>, 下文统一称为源文件。</li>
+<li><code>chezmoi edit ~/.zshrc</code>: 编辑源文件。</li>
+<li><code>chezmoi diff</code>: 查看源文件和实际家目录下的对应文件的差异。</li>
+<li><code>chezmoi -v apply</code>: 将源文件应用到家目录。其中<code>-v</code>选项会显示对实际文件所做的更改，建议添加。</li>
+<li><code>chezmoi cd</code>: 进入<code>~/.local/share/chezmoi</code>.</li>
+<li><code>git add .</code>然后<code>git commit</code>: 提交更改。</li>
+<li>在 GitHub 下新建一个仓库(建议命令为<code>dotfiles</code>，这样在新机器的安装的时候可以使用<code>sh -c &quot;$(curl -fsLS get.chezmoi.io)&quot; -- init --apply $GITHUB_USERNAME</code>一键应用配置)，然后:</li>
+</ol>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:<span class="variable">$GITHUB_USERNAME</span>/dotfiles.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure></div>
+<h3 id="3-在新机器上部署">3. 在新机器上部署</h3>
+<p>拿到新机器后，只需三步：</p>
+<ol>
+<li>安装 chezmoi（如上）。</li>
+<li>运行 <code>chezmoi init $GITHUB_USERNAME</code> 克隆你的 dotfiles 仓库。</li>
+<li>运行 <code>chezmoi apply</code> 应用配置。</li>
+</ol>
+<p>就这么简单！你的 Shell、Git、编辑器等配置瞬间就绪。</p>
+<h2 id="进阶功能示例">进阶功能示例</h2>
+<h3 id="1-处理机器差异（模板）">1. 处理机器差异（模板）</h3>
+<p>假设你的工作电脑和笔记本使用不同的 Git 用户名，可以在 <code>~/.local/share/chezmoi/home/.gitconfig.tmpl</code> 中这样写：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = &#123;&#123; if eq .chezmoi.hostname &quot;work-laptop&quot; &#125;&#125;工作姓名&#123;&#123; else &#125;&#125;个人姓名&#123;&#123; end &#125;&#125;</span><br><span class="line">    email = &#123;&#123; if eq .chezmoi.hostname &quot;work-laptop&quot; &#125;&#125;work@email.com&#123;&#123; else &#125;&#125;personal@email.com&#123;&#123; end &#125;&#125;</span><br></pre></td></tr></table></figure></div>
+<p>chezmoi 会根据当前主机名自动渲染正确的值。</p>
+<h3 id="2-加密敏感文件">2. 加密敏感文件</h3>
+<p>使用 <code>chezmoi add --encrypt ~/.secrets/api-key</code> 即可加密文件。chezmoi 会询问你使用哪种加密方式（推荐 <code>age</code>），加密后的文件（如 <code>api-key.age</code>）可以安全地提交到公开仓库，只有拥有私钥的你才能解密使用。</p>
+<blockquote>
+<p>注意：本文基于 chezmoi 官网信息整理，具体命令和功能请以 <a class="link"   target="_blank" rel="noopener" href="https://www.chezmoi.io/" >官方文档</a> 和你的实际版本为准。</p>
+</blockquote>
+
 		</div>
 
 		
@@ -625,7 +669,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2026-04-05 20:16:43
+                    :</strong> 2026-04-19 20:39:08
             </li>
         
         <li>
@@ -750,7 +794,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">chezmoi</div>
-		
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">用 chezmoi 优雅管理你的跨设备 Dotfiles</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="nav-text">快速开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-chezmoi"><span class="nav-text">1. 安装 chezmoi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8"><span class="nav-text">2. 使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%9C%A8%E6%96%B0%E6%9C%BA%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2"><span class="nav-text">3. 在新机器上部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E5%8A%9F%E8%83%BD%E7%A4%BA%E4%BE%8B"><span class="nav-text">进阶功能示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%A4%84%E7%90%86%E6%9C%BA%E5%99%A8%E5%B7%AE%E5%BC%82%EF%BC%88%E6%A8%A1%E6%9D%BF%EF%BC%89"><span class="nav-text">1. 处理机器差异（模板）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8A%A0%E5%AF%86%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6"><span class="nav-text">2. 加密敏感文件</span></a></li></ol></li></ol></li></ol>
 
 	</div>
 </div>
@@ -782,7 +826,7 @@
                     </span>
                     
                         <span>
-                            共 11.7k 字
+                            共 12.4k 字
                         </span>
                     
                 </p>
