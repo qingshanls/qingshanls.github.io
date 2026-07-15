@@ -1,329 +1,449 @@
-.markdown-body {
-  font-family: $english-font-family, $chinese-font-family, sans-serif;
-  font-size: $default-article-font-size;
+.keep-markdown-body,
+.keep-markdown-body > .post {
+  font-size: 1rem;
 }
-.markdown-body blockquote:not(.not-markdown) {
+.keep-markdown-body blockquote,
+.keep-markdown-body > .post blockquote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   box-sizing: border-box;
-  margin: 20px 0;
-  color: var(--default-text-color);
-  background: var(--third-background-color);
-  padding: 0 1rem 0 0.5rem;
-  border-radius: 0 $redefine-border-radius-medium $redefine-border-radius-medium 0;
+  margin: 1.4rem 0;
+  padding: 0.8rem;
+  color: var(--text-color-3);
+  background: var(--background-color-2);
+  border-left: 0.4rem solid var(--text-color-4);
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+.keep-markdown-body blockquote p,
+.keep-markdown-body > .post blockquote p,
+.keep-markdown-body blockquote ul,
+.keep-markdown-body > .post blockquote ul,
+.keep-markdown-body blockquote ol,
+.keep-markdown-body > .post blockquote ol,
+.keep-markdown-body blockquote footer,
+.keep-markdown-body > .post blockquote footer {
   position: relative;
-  border-left: 5px solid var(--default-text-color);
+  box-sizing: border-box;
 }
-.markdown-body blockquote:not(.not-markdown) p,
-.markdown-body blockquote:not(.not-markdown) ul,
-.markdown-body blockquote:not(.not-markdown) ol {
-  padding: 5px 5px 5px 10px;
+.keep-markdown-body blockquote footer,
+.keep-markdown-body > .post blockquote footer {
+  margin-bottom: 0.6rem;
+  font-style: italic;
 }
-.markdown-body p:not(.not-markdown) {
-  line-height: $default-line-height;
-  color: var(--default-text-color);
-  font-weight: 400;
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-.markdown-body a:not(.not-markdown) {
+.keep-markdown-body blockquote cite,
+.keep-markdown-body > .post blockquote cite {
   position: relative;
-  outline: 0;
-  text-decoration: underline;
+  box-sizing: border-box;
+  margin-left: 1rem;
+  color: var(--text-color-4);
+}
+.keep-markdown-body blockquote cite::before,
+.keep-markdown-body > .post blockquote cite::before {
+  content: '— ';
+}
+.keep-markdown-body p,
+.keep-markdown-body > .post p {
+  margin: 0.6rem 0;
+  color: var(--text-color-3);
+  line-height: 2;
+}
+.keep-markdown-body a,
+.keep-markdown-body > .post a {
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 0.1rem;
+  text-decoration: none;
   overflow-wrap: break-word;
+  border-bottom: 0.1rem solid var(--text-color-4);
+  outline: 0;
   cursor: pointer;
-  box-sizing: border-box;
-  padding-bottom: 2px;
-  text-underline-offset: 2px;
-  text-decoration-color: var(--fourth-text-color);
-  transition: text-decoration-color 0.2s ease;
 }
-.markdown-body a:not(.not-markdown).link {
-  padding-right: 0.1em;
-}
-.markdown-body a:not(.not-markdown) .fas,
-.markdown-body a:not(.not-markdown) .far,
-.markdown-body a:not(.not-markdown) fab {
-  margin: 0 2px 0 6px;
+.keep-markdown-body a .fas,
+.keep-markdown-body > .post a .fas,
+.keep-markdown-body a .far,
+.keep-markdown-body > .post a .far,
+.keep-markdown-body a .fab,
+.keep-markdown-body > .post a .fab {
   position: relative;
-  color: var(--third-text-color);
-  font-size: 0.88rem;
+  margin: 0 0.2rem 0 0.4rem;
+  color: var(--text-color-4);
+  font-size: 0.8rem;
 }
-.markdown-body a:not(.not-markdown) .link-icon {
-  transition: transform 0.2s ease;
-}
-.markdown-body a:not(.not-markdown):hover,
-.markdown-body a:not(.not-markdown):focus {
-  text-decoration: underline !important;
-  text-decoration-color: var(--primary-color) !important;
-}
-.markdown-body a:not(.not-markdown):hover .link-icon,
-.markdown-body a:not(.not-markdown):focus .link-icon {
-  transform: translate(0.1em, -0.1em);
-}
-.markdown-body a:not(.not-markdown):hover::after,
-.markdown-body a:not(.not-markdown):focus::after {
-  background: var(--primary-color);
+.keep-markdown-body a:hover,
+.keep-markdown-body > .post a:hover {
   text-decoration: underline;
 }
-.markdown-body strong:not(.not-markdown) {
-  color: var(--default-text-color);
+.keep-markdown-body a:hover::after,
+.keep-markdown-body > .post a:hover::after {
+  background: var(--primary-color);
 }
-.markdown-body hr:not(.not-markdown) {
-  margin: 2rem 0;
-  border: 0;
-  border-top: 2px solid var(--shadow-color-1);
+.keep-markdown-body strong,
+.keep-markdown-body > .post strong {
+  color: var(--text-color-3);
 }
-.markdown-body em:not(.not-markdown) {
-  color: var(--default-text-color);
+.keep-markdown-body em,
+.keep-markdown-body > .post em {
+  color: var(--text-color-3);
 }
-.markdown-body ul:not(.not-markdown) > li,
-.markdown-body ol:not(.not-markdown) > li {
-  margin-left: 20px;
+.keep-markdown-body del,
+.keep-markdown-body > .post del {
+  color: var(--text-color-3);
+}
+.keep-markdown-body ul li,
+.keep-markdown-body > .post ul li,
+.keep-markdown-body ol li,
+.keep-markdown-body > .post ol li {
+  margin: 0.3rem 0 0.3rem 1rem;
   line-height: 2rem;
 }
-.markdown-body ul:not(.not-markdown) {
-  margin-bottom: 1.2rem;
-}
-.markdown-body ul:not(.not-markdown) li {
+.keep-markdown-body ul li,
+.keep-markdown-body > .post ul li {
   list-style: disc;
 }
-.markdown-body ul:not(.not-markdown) li ul li {
+.keep-markdown-body ul li ul li,
+.keep-markdown-body > .post ul li ul li {
   list-style: circle;
 }
-.markdown-body ul:not(.not-markdown) li ul li ul li {
+.keep-markdown-body ul li ul li ul li,
+.keep-markdown-body > .post ul li ul li ul li {
   list-style: square;
 }
-.markdown-body ol:not(.not-markdown) {
-  margin-bottom: 1.2rem;
-}
-.markdown-body ol:not(.not-markdown) li {
+.keep-markdown-body ol li,
+.keep-markdown-body > .post ol li {
   list-style: decimal;
 }
-.markdown-body ol:not(.not-markdown) li ul li {
-  list-style: disc;
-}
-.markdown-body ol:not(.not-markdown) li ul ul li {
-  list-style: circle;
-}
-.markdown-body ol:not(.not-markdown) li ol li {
+.keep-markdown-body ol li ol li,
+.keep-markdown-body > .post ol li ol li {
   list-style: upper-alpha;
 }
-.markdown-body ol:not(.not-markdown) li ol li ol li {
+.keep-markdown-body ol li ol li ol li,
+.keep-markdown-body > .post ol li ol li ol li {
   list-style: upper-roman;
 }
-.markdown-body li:not(.not-markdown) {
-  color: var(--default-text-color);
+.keep-markdown-body li,
+.keep-markdown-body > .post li {
+  color: var(--text-color-3);
 }
-.markdown-body h1:not(.not-markdown),
-.markdown-body h2:not(.not-markdown),
-.markdown-body h3:not(.not-markdown),
-.markdown-body h4:not(.not-markdown),
-.markdown-body h5:not(.not-markdown),
-.markdown-body h6:not(.not-markdown),
-.markdown-body .h1:not(.not-markdown),
-.markdown-body .h2:not(.not-markdown),
-.markdown-body .h3:not(.not-markdown),
-.markdown-body .h4:not(.not-markdown),
-.markdown-body .h5:not(.not-markdown),
-.markdown-body .h6:not(.not-markdown) {
-  font-family: $english-font-family, $chinese-font-family, sans-serif;
-  color: var(--second-text-color);
-  line-height: $default-line-height;
-redefine-tablet()
-}
-.markdown-body h1:not(.not-markdown),
-.markdown-body .h1:not(.not-markdown) {
-  font-size: 3.2rem;
-  font-weight: 650;
-  border-bottom: solid 2px var(--fourth-text-color);
-  margin-top: $h1-heading-margin-top;
-  margin-bottom: 1rem;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-redefine-tablet()
-}
-.markdown-body h2:not(.not-markdown),
-.markdown-body .h2:not(.not-markdown) {
-  font-size: 2.5rem;
-  font-weight: 650;
-  padding: 3px 0;
-  border-bottom: solid 2px var(--fourth-text-color);
-  margin-top: $h2-heading-margin-top;
-  margin-bottom: 1rem;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-redefine-tablet()
-}
-.markdown-body h3:not(.not-markdown),
-.markdown-body .h3:not(.not-markdown) {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-top: $h3-heading-margin-top;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.025em;
-  line-height: 1.3;
-redefine-tablet()
-}
-.markdown-body h4:not(.not-markdown),
-.markdown-body .h4:not(.not-markdown) {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: $h4-heading-margin-top;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-redefine-tablet()
-}
-.markdown-body h5:not(.not-markdown),
-.markdown-body .h5:not(.not-markdown) {
-  font-size: 1.28rem;
-  font-weight: 600;
-  margin-top: $h5-heading-margin-top;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-redefine-tablet()
-}
-.markdown-body h6:not(.not-markdown),
-.markdown-body .h6:not(.not-markdown) {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: $h6-heading-margin-top;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-redefine-tablet()
-}
-.markdown-body img:not(.not-markdown) {
+.keep-markdown-body h1,
+.keep-markdown-body > .post h1,
+.keep-markdown-body h2,
+.keep-markdown-body > .post h2,
+.keep-markdown-body h3,
+.keep-markdown-body > .post h3,
+.keep-markdown-body h4,
+.keep-markdown-body > .post h4,
+.keep-markdown-body h5,
+.keep-markdown-body > .post h5,
+.keep-markdown-body h6,
+.keep-markdown-body > .post h6 {
+  position: relative;
+  display: block;
   box-sizing: border-box;
-  border-radius: $usr-img-border-radius;
-  max-width: 100%;
-  cursor: zoom-in;
-  display: block;
-  margin: 1rem auto 1rem;
+  padding-top: 0.4rem;
+  padding-right: 2.2rem;
+  padding-bottom: 0.2rem;
+  overflow: hidden;
+  color: var(--text-color-2);
+  line-height: 1.6;
+  border-bottom: 1px solid var(--post-h-bottom-border-color);
+keep-tablet()
+keep-mobile()
 }
-.markdown-body del.mask:not(.not-markdown) {
-  text-decoration: none !important;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) color, 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) background;
+.keep-markdown-body h1:hover a.headerlink,
+.keep-markdown-body > .post h1:hover a.headerlink,
+.keep-markdown-body h2:hover a.headerlink,
+.keep-markdown-body > .post h2:hover a.headerlink,
+.keep-markdown-body h3:hover a.headerlink,
+.keep-markdown-body > .post h3:hover a.headerlink,
+.keep-markdown-body h4:hover a.headerlink,
+.keep-markdown-body > .post h4:hover a.headerlink,
+.keep-markdown-body h5:hover a.headerlink,
+.keep-markdown-body > .post h5:hover a.headerlink,
+.keep-markdown-body h6:hover a.headerlink,
+.keep-markdown-body > .post h6:hover a.headerlink,
+.keep-markdown-body h1:hover a.markdownIt-Anchor,
+.keep-markdown-body > .post h1:hover a.markdownIt-Anchor,
+.keep-markdown-body h2:hover a.markdownIt-Anchor,
+.keep-markdown-body > .post h2:hover a.markdownIt-Anchor,
+.keep-markdown-body h3:hover a.markdownIt-Anchor,
+.keep-markdown-body > .post h3:hover a.markdownIt-Anchor,
+.keep-markdown-body h4:hover a.markdownIt-Anchor,
+.keep-markdown-body > .post h4:hover a.markdownIt-Anchor,
+.keep-markdown-body h5:hover a.markdownIt-Anchor,
+.keep-markdown-body > .post h5:hover a.markdownIt-Anchor,
+.keep-markdown-body h6:hover a.markdownIt-Anchor,
+.keep-markdown-body > .post h6:hover a.markdownIt-Anchor {
+  visibility: visible;
 }
-.markdown-body del.mask:not(.not-markdown) * {
-  transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) opacity;
-}
-.markdown-body del.mask:not(.not-markdown):not(:hover) {
-  color: transparent !important;
-  background: #000 !important;
-}
-.markdown-body del.mask:not(.not-markdown):not(:hover) * {
-  opacity: 0 !important;
-}
-.markdown-body del.mask:not(.not-markdown):not(:hover),
-.markdown-body del.mask:not(.not-markdown):not(:hover) * {
-  border: none !important;
-}
-.markdown-body > table:not(.not-markdown),
-.markdown-body .tab-pane > table:not(.not-markdown) {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-  overflow: auto;
-  margin-bottom: 1.2rem;
-  margin-top: 1rem;
-  box-shadow: var(--redefine-box-shadow-flat);
-  border-radius: $redefine-border-radius-medium;
-}
-.markdown-body > table:not(.not-markdown) thead th,
-.markdown-body .tab-pane > table:not(.not-markdown) thead th {
-  border-bottom: 1px solid var(--shadow-color-1);
-  background-color: var(--third-background-color) !important;
-}
-.markdown-body > table:not(.not-markdown) thead th:first-child,
-.markdown-body .tab-pane > table:not(.not-markdown) thead th:first-child {
-  border-top-left-radius: $redefine-border-radius-medium;
-}
-.markdown-body > table:not(.not-markdown) thead th:last-child,
-.markdown-body .tab-pane > table:not(.not-markdown) thead th:last-child {
-  border-top-right-radius: $redefine-border-radius-medium;
-}
-.markdown-body > table:not(.not-markdown) tbody tr:last-child td:first-child,
-.markdown-body .tab-pane > table:not(.not-markdown) tbody tr:last-child td:first-child {
-  border-bottom-left-radius: $redefine-border-radius-medium;
-}
-.markdown-body > table:not(.not-markdown) tbody tr:last-child td:last-child,
-.markdown-body .tab-pane > table:not(.not-markdown) tbody tr:last-child td:last-child {
-  border-bottom-right-radius: $redefine-border-radius-medium;
-}
-.markdown-body > table:not(.not-markdown) td,
-.markdown-body .tab-pane > table:not(.not-markdown) td,
-.markdown-body > table:not(.not-markdown) th,
-.markdown-body .tab-pane > table:not(.not-markdown) th {
-  padding: 8px 16px;
-  border-left: 1px solid var(--shadow-color-1);
-}
-.markdown-body > table:not(.not-markdown) td:first-child,
-.markdown-body .tab-pane > table:not(.not-markdown) td:first-child,
-.markdown-body > table:not(.not-markdown) th:first-child,
-.markdown-body .tab-pane > table:not(.not-markdown) th:first-child {
-  border-left: none;
-}
-.markdown-body > table:not(.not-markdown) tr,
-.markdown-body .tab-pane > table:not(.not-markdown) tr {
-  background-color: var(--background-color);
-}
-.markdown-body > table:not(.not-markdown) tr:nth-child(2n),
-.markdown-body .tab-pane > table:not(.not-markdown) tr:nth-child(2n) {
-  background-color: var(--second-background-color);
-}
-.markdown-body mjx-container:not(.not-markdown) {
-  display: inline;
-  overflow-x: auto;
-  white-space: nowrap;
-  margin: 0 0.2rem;
-}
-.markdown-body mjx-container:not(.not-markdown):hover::-webkit-scrollbar-thumb {
-  border: 3px solid rgba(183,183,183,0.3);
-}
-.markdown-body mjx-container:not(.not-markdown)::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  transition: all 0.2s ease;
-  display: block;
-}
-.markdown-body mjx-container:not(.not-markdown)::-webkit-scrollbar-track {
-  background: transparent;
-  border: none;
-}
-.markdown-body mjx-container:not(.not-markdown)::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  border: 3px solid rgba(183,183,183,0);
-  transition: all 0.2s ease;
-}
-.markdown-body mjx-container:not(.not-markdown) svg {
-  display: inline-block /* Allow content to be centered properly */;
-}
-.markdown-body mjx-container[display="true"]:not(.not-markdown) {
-  display: block;
+.keep-markdown-body h1 a.headerlink,
+.keep-markdown-body > .post h1 a.headerlink,
+.keep-markdown-body h2 a.headerlink,
+.keep-markdown-body > .post h2 a.headerlink,
+.keep-markdown-body h3 a.headerlink,
+.keep-markdown-body > .post h3 a.headerlink,
+.keep-markdown-body h4 a.headerlink,
+.keep-markdown-body > .post h4 a.headerlink,
+.keep-markdown-body h5 a.headerlink,
+.keep-markdown-body > .post h5 a.headerlink,
+.keep-markdown-body h6 a.headerlink,
+.keep-markdown-body > .post h6 a.headerlink,
+.keep-markdown-body h1 a.markdownIt-Anchor,
+.keep-markdown-body > .post h1 a.markdownIt-Anchor,
+.keep-markdown-body h2 a.markdownIt-Anchor,
+.keep-markdown-body > .post h2 a.markdownIt-Anchor,
+.keep-markdown-body h3 a.markdownIt-Anchor,
+.keep-markdown-body > .post h3 a.markdownIt-Anchor,
+.keep-markdown-body h4 a.markdownIt-Anchor,
+.keep-markdown-body > .post h4 a.markdownIt-Anchor,
+.keep-markdown-body h5 a.markdownIt-Anchor,
+.keep-markdown-body > .post h5 a.markdownIt-Anchor,
+.keep-markdown-body h6 a.markdownIt-Anchor,
+.keep-markdown-body > .post h6 a.markdownIt-Anchor {
+  position: absolute;
+  top: 0.4rem;
+  right: 0;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  vertical-align: baseline;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  scrollbar-width: thin;
-  padding-bottom: 8px;
-}
-.markdown-body mjx-container[display="true"]:not(.not-markdown):hover::-webkit-scrollbar-thumb {
-  border: 3px solid rgba(183,183,183,0.3);
-}
-.markdown-body mjx-container[display="true"]:not(.not-markdown)::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  transition: all 0.2s ease;
-  display: block;
-}
-.markdown-body mjx-container[display="true"]:not(.not-markdown)::-webkit-scrollbar-track {
-  background: transparent;
+  box-sizing: border-box;
+  width: 1.6em;
+  height: 1.6em;
+  margin-left: 0;
+  padding: 0;
+  color: var(--text-color-4);
+  font-size: 1.2rem;
+  line-height: 1;
+  text-decoration: none;
   border: none;
+  visibility: hidden;
+  cursor: pointer;
 }
-.markdown-body mjx-container[display="true"]:not(.not-markdown)::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  border: 3px solid rgba(183,183,183,0);
-  transition: all 0.2s ease;
+.keep-markdown-body h1 a.headerlink:hover,
+.keep-markdown-body > .post h1 a.headerlink:hover,
+.keep-markdown-body h2 a.headerlink:hover,
+.keep-markdown-body > .post h2 a.headerlink:hover,
+.keep-markdown-body h3 a.headerlink:hover,
+.keep-markdown-body > .post h3 a.headerlink:hover,
+.keep-markdown-body h4 a.headerlink:hover,
+.keep-markdown-body > .post h4 a.headerlink:hover,
+.keep-markdown-body h5 a.headerlink:hover,
+.keep-markdown-body > .post h5 a.headerlink:hover,
+.keep-markdown-body h6 a.headerlink:hover,
+.keep-markdown-body > .post h6 a.headerlink:hover,
+.keep-markdown-body h1 a.markdownIt-Anchor:hover,
+.keep-markdown-body > .post h1 a.markdownIt-Anchor:hover,
+.keep-markdown-body h2 a.markdownIt-Anchor:hover,
+.keep-markdown-body > .post h2 a.markdownIt-Anchor:hover,
+.keep-markdown-body h3 a.markdownIt-Anchor:hover,
+.keep-markdown-body > .post h3 a.markdownIt-Anchor:hover,
+.keep-markdown-body h4 a.markdownIt-Anchor:hover,
+.keep-markdown-body > .post h4 a.markdownIt-Anchor:hover,
+.keep-markdown-body h5 a.markdownIt-Anchor:hover,
+.keep-markdown-body > .post h5 a.markdownIt-Anchor:hover,
+.keep-markdown-body h6 a.markdownIt-Anchor:hover,
+.keep-markdown-body > .post h6 a.markdownIt-Anchor:hover {
+  color: var(--text-color-3);
+  text-decoration: none;
 }
-.markdown-body mjx-container[display="true"]:not(.not-markdown) svg {
+.keep-markdown-body h1 a.headerlink::before,
+.keep-markdown-body > .post h1 a.headerlink::before,
+.keep-markdown-body h2 a.headerlink::before,
+.keep-markdown-body > .post h2 a.headerlink::before,
+.keep-markdown-body h3 a.headerlink::before,
+.keep-markdown-body > .post h3 a.headerlink::before,
+.keep-markdown-body h4 a.headerlink::before,
+.keep-markdown-body > .post h4 a.headerlink::before,
+.keep-markdown-body h5 a.headerlink::before,
+.keep-markdown-body > .post h5 a.headerlink::before,
+.keep-markdown-body h6 a.headerlink::before,
+.keep-markdown-body > .post h6 a.headerlink::before,
+.keep-markdown-body h1 a.markdownIt-Anchor::before,
+.keep-markdown-body > .post h1 a.markdownIt-Anchor::before,
+.keep-markdown-body h2 a.markdownIt-Anchor::before,
+.keep-markdown-body > .post h2 a.markdownIt-Anchor::before,
+.keep-markdown-body h3 a.markdownIt-Anchor::before,
+.keep-markdown-body > .post h3 a.markdownIt-Anchor::before,
+.keep-markdown-body h4 a.markdownIt-Anchor::before,
+.keep-markdown-body > .post h4 a.markdownIt-Anchor::before,
+.keep-markdown-body h5 a.markdownIt-Anchor::before,
+.keep-markdown-body > .post h5 a.markdownIt-Anchor::before,
+.keep-markdown-body h6 a.markdownIt-Anchor::before,
+.keep-markdown-body > .post h6 a.markdownIt-Anchor::before {
+  font-weight: 600;
+  font-family: 'Font Awesome 6 Free';
+  content: '\f0c1';
+}
+.keep-markdown-body h1 code,
+.keep-markdown-body > .post h1 code,
+.keep-markdown-body h2 code,
+.keep-markdown-body > .post h2 code,
+.keep-markdown-body h3 code,
+.keep-markdown-body > .post h3 code,
+.keep-markdown-body h4 code,
+.keep-markdown-body > .post h4 code,
+.keep-markdown-body h5 code,
+.keep-markdown-body > .post h5 code,
+.keep-markdown-body h6 code,
+.keep-markdown-body > .post h6 code {
+  position: relative;
   display: inline-block;
+  transform: translateY(-0.2rem) !important;
+}
+.keep-markdown-body h1,
+.keep-markdown-body > .post h1 {
+  font-weight: 600;
+  font-size: 1.68rem;
+keep-tablet()
+keep-mobile()
+}
+.keep-markdown-body h1 a.headerlink,
+.keep-markdown-body > .post h1 a.headerlink,
+.keep-markdown-body h1 a.markdownIt-Anchor,
+.keep-markdown-body > .post h1 a.markdownIt-Anchor {
+  font-size: 1.344rem;
+}
+.keep-markdown-body h2,
+.keep-markdown-body > .post h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+keep-tablet()
+keep-mobile()
+}
+.keep-markdown-body h2 a.headerlink,
+.keep-markdown-body > .post h2 a.headerlink,
+.keep-markdown-body h2 a.markdownIt-Anchor,
+.keep-markdown-body > .post h2 a.markdownIt-Anchor {
+  font-size: 1.28rem;
+}
+.keep-markdown-body h3,
+.keep-markdown-body > .post h3 {
+  font-weight: 550;
+  font-size: 1.5rem;
+keep-tablet()
+keep-mobile()
+}
+.keep-markdown-body h3 a.headerlink,
+.keep-markdown-body > .post h3 a.headerlink,
+.keep-markdown-body h3 a.markdownIt-Anchor,
+.keep-markdown-body > .post h3 a.markdownIt-Anchor {
+  font-size: 1.2rem;
+}
+.keep-markdown-body h4,
+.keep-markdown-body > .post h4 {
+  font-weight: 550;
+  font-size: 1.4rem;
+keep-tablet()
+keep-mobile()
+}
+.keep-markdown-body h4 a.headerlink,
+.keep-markdown-body > .post h4 a.headerlink,
+.keep-markdown-body h4 a.markdownIt-Anchor,
+.keep-markdown-body > .post h4 a.markdownIt-Anchor {
+  font-size: 1.12rem;
+}
+.keep-markdown-body h5,
+.keep-markdown-body > .post h5 {
+  font-weight: 500;
+  font-size: 1.3rem;
+keep-tablet()
+keep-mobile()
+}
+.keep-markdown-body h5 a.headerlink,
+.keep-markdown-body > .post h5 a.headerlink,
+.keep-markdown-body h5 a.markdownIt-Anchor,
+.keep-markdown-body > .post h5 a.markdownIt-Anchor {
+  font-size: 1.04rem;
+}
+.keep-markdown-body h6,
+.keep-markdown-body > .post h6 {
+  font-weight: 500;
+  font-size: 1.2rem;
+keep-tablet()
+keep-mobile()
+}
+.keep-markdown-body h6 a.headerlink,
+.keep-markdown-body > .post h6 a.headerlink,
+.keep-markdown-body h6 a.markdownIt-Anchor,
+.keep-markdown-body > .post h6 a.markdownIt-Anchor {
+  font-size: 1.2rem;
+}
+.keep-markdown-body img,
+.keep-markdown-body > .post img {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  box-shadow: 0 0 0.2rem var(--shadow-color);
+  cursor: zoom-in;
+  opacity: 1;
+}
+.keep-markdown-body img.hide,
+.keep-markdown-body > .post img.hide {
+  opacity: 0;
+}
+.keep-markdown-body img[lazyload],
+.keep-markdown-body > .post img[lazyload] {
+  margin: 0.8rem auto 0.2rem;
+  zoom: 1 !important;
+}
+.keep-markdown-body > img,
+.keep-markdown-body > .post > img,
+.keep-markdown-body p > img,
+.keep-markdown-body > .post p > img {
+  margin: var(--post-img-align);
+}
+.keep-markdown-body > .table-container,
+.keep-markdown-body > .post > .table-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow: auto;
+}
+.keep-markdown-body > .table-container table,
+.keep-markdown-body > .post > .table-container table {
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.keep-markdown-body > .table-container table td,
+.keep-markdown-body > .post > .table-container table td,
+.keep-markdown-body > .table-container table th,
+.keep-markdown-body > .post > .table-container table th {
+  padding: 0;
+  white-space: nowrap;
+}
+.keep-markdown-body > .table-container table td,
+.keep-markdown-body > .post > .table-container table td {
+  color: var(--text-color-3);
+}
+.keep-markdown-body > .table-container table th,
+.keep-markdown-body > .post > .table-container table th {
+  color: var(--text-color-2);
+  font-weight: 600;
+}
+.keep-markdown-body > .table-container table td,
+.keep-markdown-body > .post > .table-container table td,
+.keep-markdown-body > .table-container table th,
+.keep-markdown-body > .post > .table-container table th {
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--border-color);
+}
+.keep-markdown-body > .table-container table tr,
+.keep-markdown-body > .post > .table-container table tr {
+  background-color: var(--background-color-1);
+  border: 0.1rem solid var(--border-color);
+}
+.keep-markdown-body > .table-container table tr:nth-child(2n),
+.keep-markdown-body > .post > .table-container table tr:nth-child(2n) {
+  background-color: var(--background-color-2);
+}
+.keep-markdown-body .mermaid,
+.keep-markdown-body > .post .mermaid {
+  background: #f5f5f5 !important;
+  border-radius: 0.3rem;
 }
